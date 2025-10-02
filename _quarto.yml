@@ -13,7 +13,7 @@ website:
         href: about.qmd
       - text: "CV"
         href: cv.qmd
-      - text: "Publications"
+      - text: "Research"
         href: research.qmd
       - text: "Teaching"
         href: teaching.qmd
