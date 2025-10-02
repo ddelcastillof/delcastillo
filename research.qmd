@@ -1,23 +1,19 @@
 ---
-title: "Publications"
+title: "Research"
 title-block-banner: false
 ---
 
-```{r }
-#| name: setup
+```{r setup}
 #| message: false
-#| eval: true
-#| include: true
 #| echo: false
+#| warning: false
 source("functions.R")
 ```
 
 ```{r importing pubs}
-#| name: importing pubs
 #| message: false
-#| eval: true
-#| include: true
 #| echo: false
+#| warning: false
 
 pubs <- get_cv_sheet('pubs') |>
   mutate(
@@ -25,74 +21,196 @@ pubs <- get_cv_sheet('pubs') |>
     number   = ifelse(is.na(number), '', paste0(number, '.')),
     doi      = case_when(is.na(doi) ~ '',
                          doi == 'Submitted under consideration' ~ doi,
-                         TRUE ~ paste0('Available at: [', doi, '](', 'https://doi.org/', doi, ')')
+                         TRUE ~ paste0('<a href="https://doi.org/', doi, '" target="_blank"><i class="fa-solid fa-link"></i> DOI</a>')
        ),
+    year_num = year,
     year     = paste0("(", year, ")"),
+    title_clean = title,
     title    = enquote(title),
     conference = ifelse(is.na(conference_name), '', paste0('<u>**', conference_name, '**</u>')),
     organization = ifelse(is.na(organization_name), '', paste0(organization_name, '.')),
-    # Different citation formats for different categories
-    citation = case_when(
-      category == "conference" ~ paste(author, year, title, conference, 
-                                      paste0(organization, ", ", place)),
-      category == "white_paper" ~ paste(author, year, title, organization_name, 
-                                      paste0(place)),
-      category == "peer_reviewed" ~ paste(author, year, title, journal, number, doi),
-      category == "working" ~ paste(author, year, title, journal, doi),
-      category == "thesis" ~ paste(author, year, title, journal, organization)
+  ) |>
+  arrange(desc(year_num))
+```
+
+::: {.featured-section}
+## Featured Publications
+
+```{r featured pubs}
+#| message: false
+#| echo: false
+#| warning: false
+#| results: asis
+
+# Get only those the featrured column is TRUE
+featured <- pubs |>
+  filter(category == "peer_reviewed") |>
+  filter(featured == TRUE)
+
+for(i in 1:nrow(featured)) {
+  pub <- featured[i,]
+  card <- make_publication_card(
+    author = pub$author,
+    year = pub$year,
+    title = pub$title_clean,
+    journal = pub$journal,
+    number = pub$number,
+    doi = pub$doi,
+    category = pub$category
+  )
+  cat(card, "\n\n")
+}
+```
+:::
+
+## All Publications
+
+::: {.publications-grid}
+
+### Peer-Reviewed Articles
+
+```{r all peer-reviewed}
+#| message: false
+#| echo: false
+#| warning: false
+#| results: asis
+
+all_peer <- pubs |> filter(category == "peer_reviewed")
+
+for(i in 1:nrow(all_peer)) {
+  pub <- all_peer[i,]
+  card <- make_publication_card(
+    author = pub$author,
+    year = pub$year,
+    title = pub$title_clean,
+    journal = pub$journal,
+    number = pub$number,
+    doi = pub$doi,
+    category = pub$category
+  )
+  cat(card, "\n\n")
+}
+```
+
+### Preprints
+
+```{r preprints}
+#| message: false
+#| echo: false
+#| warning: false
+#| results: asis
+
+preprints <- pubs |> filter(category == "working")
+
+if(nrow(preprints) > 0) {
+  for(i in 1:nrow(preprints)) {
+    pub <- preprints[i,]
+    card <- make_publication_card(
+      author = pub$author,
+      year = pub$year,
+      title = pub$title_clean,
+      journal = pub$journal,
+      number = pub$number,
+      doi = pub$doi,
+      category = pub$category
     )
-  ) |> 
-  arrange(desc(year))
+    cat(card, "\n\n")
+  }
+}
 ```
 
-## Peer-Reviewed Publications
-```{r printing references in pandoc format}
+### Policy Statements & Reports
+
+```{r white papers}
 #| message: false
-#| eval: true
-#| include: true
 #| echo: false
+#| warning: false
 #| results: asis
 
-make_ordered_list_filtered(pubs, "peer_reviewed")
-```
+reports <- pubs |> filter(category == "white_paper")
 
-## Others
-## Pre-prints
-```{r printing pre-print}
-#| message: false
-#| eval: true
-#| include: true
-#| echo: false
-#| results: asis
-make_ordered_list_filtered(pubs, "working")
-```
-
-### Policy Statements, White Papers, Reports
-```{r printing white papers}
-#| message: false
-#| eval: true
-#| include: true
-#| echo: false
-#| results: asis
-make_ordered_list_filtered(pubs, "white_paper")
+if(nrow(reports) > 0) {
+  for(i in 1:nrow(reports)) {
+    pub <- reports[i,]
+    # Simpler card for white papers (no journal)
+    year_clean <- gsub("[()]", "", pub$year)
+    card <- paste0(
+      '<div class="publication-card">',
+      '<div class="pub-header">',
+      '<div class="pub-badges">',
+      '<span class="pub-badge pub-year">', year_clean, '</span> ',
+      '<span class="pub-badge pub-category">Report</span>',
+      '</div></div>',
+      '<h3 class="pub-title">', gsub('"', '', pub$title), '</h3>',
+      '<p class="pub-authors">', pub$author, '</p>',
+      '<p class="pub-venue">', pub$organization_name, ', ', pub$place, '</p>',
+      '</div>'
+    )
+    cat(card, "\n\n")
+  }
+}
 ```
 
 ### Theses
+
 ```{r theses}
 #| message: false
-#| eval: true
-#| include: true
 #| echo: false
+#| warning: false
 #| results: asis
-make_ordered_list_filtered(pubs, "thesis")
+
+theses <- pubs |> filter(category == "thesis")
+
+if(nrow(theses) > 0) {
+  for(i in 1:nrow(theses)) {
+    pub <- theses[i,]
+    year_clean <- gsub("[()]", "", pub$year)
+    card <- paste0(
+      '<div class="publication-card">',
+      '<div class="pub-header">',
+      '<div class="pub-badges">',
+      '<span class="pub-badge pub-year">', year_clean, '</span> ',
+      '<span class="pub-badge pub-category">Thesis</span>',
+      '</div></div>',
+      '<h3 class="pub-title">', gsub('"', '', pub$title), '</h3>',
+      '<p class="pub-authors">', pub$author, '</p>',
+      '<p class="pub-venue">', pub$journal, ' • ', pub$organization, '</p>',
+      '</div>'
+    )
+    cat(card, "\n\n")
+  }
+}
 ```
 
 ### Conference Abstracts
+
 ```{r conference}
 #| message: false
-#| eval: true
-#| include: true
 #| echo: false
+#| warning: false
 #| results: asis
-make_ordered_list_filtered(pubs, "conference")
+
+conferences <- pubs |> filter(category == "conference")
+
+if(nrow(conferences) > 0) {
+  for(i in 1:nrow(conferences)) {
+    pub <- conferences[i,]
+    year_clean <- gsub("[()]", "", pub$year)
+    card <- paste0(
+      '<div class="publication-card">',
+      '<div class="pub-header">',
+      '<div class="pub-badges">',
+      '<span class="pub-badge pub-year">', year_clean, '</span> ',
+      '<span class="pub-badge pub-category">Conference</span>',
+      '</div></div>',
+      '<h3 class="pub-title">', gsub('"', '', pub$title), '</h3>',
+      '<p class="pub-authors">', pub$author, '</p>',
+      '<p class="pub-venue">', pub$conference, ' • ', pub$organization, ', ', pub$place, '</p>',
+      '</div>'
+    )
+    cat(card, "\n\n")
+  }
+}
 ```
+
+:::
