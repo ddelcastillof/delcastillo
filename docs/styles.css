@@ -19,6 +19,19 @@
   line-height: 1.6;
 }
 
+/* Center the profile image */
+.quarto-about-marquee .about-image {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+
+.quarto-about-marquee img.about-image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Style the social links */
 .about-links {
   margin-top: 1.5rem;

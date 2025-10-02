@@ -1,6 +1,6 @@
 ---
 title: "Darwin Del Castillo"
-image: "images/my-picture.png"
+image: "images/my-picture.jpg"
 about:
   template: marquee
   image-shape: round
