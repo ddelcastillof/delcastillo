@@ -19,18 +19,30 @@ source("functions.R")
 #| include: true
 #| echo: false
 
-pubs <- get_cv_sheet('pubs') %>%
+pubs <- get_cv_sheet('pubs') |>
   mutate(
-    journal  = ifelse(is.na(journal_abbv), '', paste0(journal_abbv)),
+    journal  = ifelse(is.na(journal_abbv), '', paste0('<u>**', journal_abbv, '**</u>')),
     number   = ifelse(is.na(number), '', paste0(number, '.')),
-    doi      = ifelse(
-               is.na(doi), '',
-               paste0('Available at: [', doi, '](', 'https://doi.org/', doi, ')')),
+    doi      = case_when(is.na(doi) ~ '',
+                         doi == 'Submitted under consideration' ~ doi,
+                         TRUE ~ paste0('Available at: [', doi, '](', 'https://doi.org/', doi, ')')
+       ),
     year     = paste0("(", year, ")"),
     title    = enquote(title),
-    citation = paste(author, year, title, journal, number, doi)
-  ) %>% 
-  arrange(desc(pub_date))
+    conference = ifelse(is.na(conference_name), '', paste0('<u>**', conference_name, '**</u>')),
+    organization = ifelse(is.na(organization_name), '', paste0(organization_name, '.')),
+    # Different citation formats for different categories
+    citation = case_when(
+      category == "conference" ~ paste(author, year, title, conference, 
+                                      paste0(organization, ", ", place)),
+      category == "white_paper" ~ paste(author, year, title, organization_name, 
+                                      paste0(place)),
+      category == "peer_reviewed" ~ paste(author, year, title, journal, number, doi),
+      category == "working" ~ paste(author, year, title, journal, doi),
+      category == "thesis" ~ paste(author, year, title, journal, organization)
+    )
+  ) |> 
+  arrange(desc(year))
 ```
 
 ## Peer-Reviewed Publications
@@ -44,6 +56,7 @@ pubs <- get_cv_sheet('pubs') %>%
 make_ordered_list_filtered(pubs, "peer_reviewed")
 ```
 
+## Others
 ## Pre-prints
 ```{r printing pre-print}
 #| message: false
@@ -54,7 +67,6 @@ make_ordered_list_filtered(pubs, "peer_reviewed")
 make_ordered_list_filtered(pubs, "working")
 ```
 
-## Others
 ### Policy Statements, White Papers, Reports
 ```{r printing white papers}
 #| message: false
