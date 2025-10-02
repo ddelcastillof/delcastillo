@@ -15,7 +15,7 @@ You can find more info about my background in my CV here: [CV](https://github.co
 :::
 
 ::: {style="text-align: justify; hyphens: auto;"}
-Darwin is a Peruvian Medical Doctor with a Master of Public Health from the University of Washington. His research focuses on understanding how early life exposures affect long-term cardiometabolic outcomes by leveraging knowledge at the intersection of epidemiology, genetics, and data science. He has extensive experience in epidemiology and data analysis. In his free time, he enjoys playing guitar, doing outdoor activities, playing with his two cats, and exploring immersive narrative experiences through videogames. Darwin holds a M.D. from the Universidad Nacional Mayor de San Marcos, the oldest university in the American continent.
+Darwin is a Peruvian Medical Doctor with a Master of Public Health from the University of Washington. His research focuses on understanding how early life exposures affect long-term cardiometabolic outcomes by leveraging knowledge at the intersection of epidemiology, genetics, and data science. He has extensive experience in epidemiology and data analysis. In his free time, he enjoys playing guitar, doing outdoor activities, playing with his two cats, and exploring immersive narrative experiences through videogames. Darwin holds a M.D. from the Universidad Nacional Mayor de San Marcos, [the oldest university in the American continent](https://en.wikipedia.org/wiki/List_of_oldest_universities_in_continuous_operation#Latin_America_and_the_Caribbean).
 :::
 
 # Peru and Latin America
