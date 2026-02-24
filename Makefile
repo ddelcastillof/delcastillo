@@ -1,4 +1,4 @@
-BIB   := src/publications.bib
+BIB   := src/references.bib
 CSL   := csl/elsevier-vancouver-no-et-al.csl
 TMPL  := src/template.html
 CSS   := src/styles.css
