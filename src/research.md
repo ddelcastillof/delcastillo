@@ -1,13 +1,10 @@
 ---
 title: Research
 bibliography: src/references.bib
-csl: csl/elsevier-vancouver-no-et-al.csl
+csl: csl/apa.csl
 nocite: '@*'
 ---
 # Research
-
-My research focuses on the burden of non-communicable diseases, causal
-inference in life-course epidemiology, and global health metrics.
 
 ## Publications
 
