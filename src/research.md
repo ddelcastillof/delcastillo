@@ -1,6 +1,6 @@
 ---
 title: Research
-bibliography: src/publications.bib
+bibliography: src/references.bib
 csl: csl/elsevier-vancouver-no-et-al.csl
 nocite: '@*'
 ---
