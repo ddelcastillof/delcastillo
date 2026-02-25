@@ -1,17 +1,9 @@
 ---
 title: ""
 ---
-
 <img src="images/my-picture.jpg" alt="Darwin Del Castillo" class="profile-img">
 
-Darwin is an epidemiologist and data scientist whose research focuses on
-understanding the burden of non-communicable diseases and their related risk
-factors. He is currently a research assistant at the University of Glasgow
-working on causal inference modelling for life-course epidemiology. Darwin
-is also an independent consultant through
-[Yachay Research Associates LLC](https://yachayassociates.com/) and a
-lecturer in the School of Medicine at the
-[Universidad Científica del Sur](https://cientifica.edu.pe/) in Peru.
+I'm an epidemiologist and data scientist whose research focuses on understanding the burden of non-communicable diseases and their related determinants. I'm currently working as a research assistant at the University of Glasgow working on causal inference modelling for life-course epidemiology. I'm also a lecturer in the School of Medicine at the [Universidad Científica del Sur](https://cientifica.edu.pe/) in Peru.
 
 <div class="social-links">
   <a href="https://github.com/ddelcastillof" target="_blank">GitHub</a>
