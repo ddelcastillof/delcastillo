@@ -1,22 +1,17 @@
 # Academic Website
 
-This is my personal academic website built with [Quarto](https://quarto.org/). The site dynamically pulls content from Google Sheets and features custom styling with CSS.
+This is my personal academic website built with Pandoc and HTML code. My references are pulled directly from a Paperpile workflow. The site is rendered with a makefile shell file.
 
 ## Tech Stack
 
-- **Framework**: Quarto
-- **Data Source**: Google Sheets API
-- **Styling**: Custom CSS, HTML, and YAML
+- **Framework**: Pandoc + HTML output
+- **Data Source**: Paperpile bib files
+- **Styling**: Custom CSS
 - **Deployment**: GitHub Pages
 
 ## Development
 
 ```bash
-# Preview the site locally
-quarto preview
-
 # Render the site
-quarto render
+make build
 ```
-
-More features and improvements coming soon as I continue to learn more about web development skills!
