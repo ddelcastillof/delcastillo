@@ -1,5 +1,5 @@
 BIB   := src/references.bib
-CSL   := csl/apa.csl
+CSL   := csl/harvard-cite-them-right-no-et-al.csl
 TMPL  := src/template.html
 CSS   := src/styles.css
 PAGES := index cv teaching
