@@ -6,20 +6,20 @@ title: Teaching
 
 ## Universidad Nacional Mayor de San Marcos
 
-| Course                       | Level         | Semester(s) | Role |
-|------------------------------|---------------|-------------|------|
-| Biostatistics and Demography | Undergraduate | Fall 2020   | TA   |
+|            Course            |     Level     | Semester(s) | Role |
+|:----------------------------:|:-------------:|:-----------:|:----:|
+| Biostatistics and Demography | Undergraduate |  Fall 2020  |  TA  |
 
 ## University of Washington
 
-| Course                  | Level         | Semester(s) | Role |
-|-------------------------|---------------|-------------|------|
-| Introduction to Biology | Undergraduate | Winter 2024 | TA   |
+|         Course          |     Level     | Semester(s) | Role |
+|:-----------------------:|:-------------:|:-----------:|:----:|
+| Introduction to Biology | Undergraduate | Winter 2024 |  TA  |
 
 ## Universidad Científica del Sur
 
-| Course                       | Level         | Semester(s)        | Role     |
-|------------------------------|---------------|--------------------|----------|
+|            Course            |     Level     |    Semester(s)     |   Role   |
+|:----------------------------:|:-------------:|:------------------:|:--------:|
 | Introduction to Epidemiology | Undergraduate | Fall 2025 –Current | Lecturer |
 
 ## Other teaching experience
