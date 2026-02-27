@@ -6,12 +6,12 @@ title: ""
 I’m an epidemiologist and data scientist focused on quantifying the burden of non-communicable diseases and understanding their key determinants. I previously worked as a research assistant at the Institute for Health Metrics and Evaluation and now hold a research assistant position at the [University of Glasgow](https://www.gla.ac.uk/schools/healthwellbeing/staff/darwindelcastillofernandez), while also lecturing in the School of Medicine at [Universidad Científica del Sur](https://cientifica.edu.pe/) in Peru.
 
 <div class="social-links">
-  <a href="https://github.com/ddelcastillof" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-  <a href="https://bsky.app/profile/justpvalues.bsky.social" target="_blank"><i class="fa-brands fa-bluesky"></i> Bluesky</a>
-  <a href="https://www.linkedin.com/in/ddelcastillof/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-  <a href="https://scholar.google.com/citations?user=iNdNU5QAAAAJ" target="_blank"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>
-  <a href="https://orcid.org/0000-0002-8609-0312" target="_blank"><i class="fa-brands fa-orcid"></i> ORCID</a>
-  <a href="mailto:darwin.delcastillofernandez@glasgow.ac.uk"><i class="fa-solid fa-envelope"></i> Email</a>
+  <a href="https://github.com/ddelcastillof" target="_blank"><i class="fa-brands fa-github"></i></a>
+  <a href="https://bsky.app/profile/justpvalues.bsky.social" target="_blank"><i class="fa-brands fa-bluesky"></i></a>
+  <a href="https://www.linkedin.com/in/ddelcastillof/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+  <a href="https://scholar.google.com/citations?user=iNdNU5QAAAAJ" target="_blank"><i class="fa-brands fa-google-scholar"></i></a>
+  <a href="https://orcid.org/0000-0002-8609-0312" target="_blank"><i class="fa-brands fa-orcid"></i></a>
+  <a href="mailto:darwin.delcastillofernandez@glasgow.ac.uk"><i class="fa-solid fa-envelope"></i></a>
 </div>
 
 ## Experience
