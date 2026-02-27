@@ -3,7 +3,7 @@ title: ""
 ---
 <img src="images/my-picture.jpg" alt="Darwin Del Castillo" class="profile-img">
 
-I'm an epidemiologist and data scientist whose research focuses on understanding the burden of non-communicable diseases and their related determinants. Currently, I'm working as a research assistant at the University of Glasgow. I'm also a lecturer in the School of Medicine at the [Universidad Científica del Sur](https://cientifica.edu.pe/) in Peru.
+I’m an epidemiologist and data scientist focused on quantifying the burden of non-communicable diseases and understanding their key determinants. I previously worked as a research assistant at the Institute for Health Metrics and Evaluation and now hold a research assistant position at the [University of Glasgow](https://www.gla.ac.uk/schools/healthwellbeing/staff/darwindelcastillofernandez), while also lecturing in the School of Medicine at [Universidad Científica del Sur](https://cientifica.edu.pe/) in Peru.
 
 <div class="social-links">
   <a href="https://github.com/ddelcastillof" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
