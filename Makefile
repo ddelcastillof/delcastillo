@@ -3,7 +3,7 @@ CSL    := csl/harvard-cite-them-right-no-et-al.csl
 TMPL   := src/template.html
 CSS    := src/styles.css
 FILTER := src/bold-author.lua
-PAGES := index cv teaching
+PAGES := index cv teaching blog
 
 .PHONY: build clean
 
