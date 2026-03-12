@@ -1,0 +1,7 @@
+.DS_Store
+CLAUDE.md
+/images/
+src/data-*.csv
+docs/plans/
+.vscode/
+.claude/
