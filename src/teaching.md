@@ -32,6 +32,8 @@ title: Teaching
   <dd>National Institute of Health &centerdot; Peru &centerdot; 2022</dd>
   <dt>Introduction to R</dt>
   <dd>Universidad Nacional Mayor de San Marcos &centerdot; Peru &centerdot; 2025</dd>
+  <dt>From the interest to the problem: how to identify a viable research question</dt>
+  <dd>Universidad Nacional Mayor de San Marcos &centerdot; Peru &centerdot; 2026 &centerdot; <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://github.com/ddelcastillof/seminars_slides/blob/main/seed_lab_2026/slides/Lecture01_Pregunta_Investigable.pdf">Slides</a></dd>
 </dl>
 
 :::
