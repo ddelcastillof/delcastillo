@@ -26,7 +26,7 @@ title: ""
 </div>
 
 <div class="book-meeting">
-  <a href="#" class="book-meeting-btn" target="_blank" rel="noopener">
+  <a href="https://outlook.office.com/bookwithme/user/0afa5d81a51548549f8b4a1d265159dd@glasgow.ac.uk/meetingtype/iWNid_4rGUu2yaqkD46oNg2?anonymous&ismsaljsauthenabled&ep=mlink" class="book-meeting-btn" target="_blank" rel="noopener">
     <i class="fa-solid fa-calendar-check"></i> Book a meeting
   </a>
 </div>
