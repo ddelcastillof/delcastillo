@@ -181,6 +181,31 @@ li { margin-bottom: 0.35rem; }
   text-decoration: none;
 }
 
+/* ── Book a meeting button ────────────────────── */
+.book-meeting {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.book-meeting-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.9rem;
+  border: 1.5px solid #1b3a6b;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #1b3a6b;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+}
+
+.book-meeting-btn:hover {
+  background: #1b3a6b;
+  color: #fff;
+  text-decoration: none;
+}
+
 /* ── Education icon list ───────────────────────── */
 .edu-list {
   list-style: none;

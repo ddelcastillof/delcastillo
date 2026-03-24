@@ -25,6 +25,12 @@ title: ""
   <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/ddelcastillof/cv/main/cv.pdf" target="_blank" rel="noopener" title="My CV"><i class="fa-solid fa-id-card"></i></a>
 </div>
 
+<div class="book-meeting">
+  <a href="#" class="book-meeting-btn" target="_blank" rel="noopener">
+    <i class="fa-solid fa-calendar-check"></i> Book a meeting
+  </a>
+</div>
+
 :::
 
 ::: {.about-right}
