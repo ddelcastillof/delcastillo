@@ -24,7 +24,7 @@ Short technical posts, annotated code, worked examples, and things I had to figu
 
 *[Mar 2026]*
 
-It seems so intuitive that postgraduate epidemiology courses rarely cover it, but understanding mediation analysis correctly is another story.
+A brief summary of a topic rarely covered in postgraduate epidemiology courses.
 
 [Read more](#) <!-- replace # with link to full post (Quarto HTML, RPubs, etc.) -->
 
