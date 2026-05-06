@@ -13,8 +13,6 @@
       document.querySelectorAll('.lang-en').forEach(function (el) { el.hidden = lang === 'es'; });
       document.querySelectorAll('.lang-es').forEach(function (el) { el.hidden = lang === 'en'; });
       document.querySelectorAll('[data-en]').forEach(function (el) { el.textContent = el.dataset[lang]; });
-      var btn = document.getElementById('lang-toggle');
-      if (btn) btn.textContent = lang === 'en' ? 'ES' : 'EN';
       document.documentElement.lang = lang;
     }
 

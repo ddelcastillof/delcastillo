@@ -366,21 +366,24 @@ footer a { color: #666; }
   }
 }
 
-/* ── Language toggle pill ────────────────────── */
-.lang-pill {
+/* ── Language globe toggle ───────────────────── */
+.lang-globe-btn {
   margin-left: 1.5rem;
-  padding: 0.2rem 0.7rem;
-  border: 1.5px solid #1b3a6b;
-  border-radius: 20px;
+  padding: 0;
+  border: none;
   background: transparent;
   color: #1b3a6b;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1;
   cursor: pointer;
-  transition: background 0.18s, color 0.18s;
+  transition: opacity 0.18s;
+  vertical-align: middle;
 }
-.lang-pill:hover {
-  background: #1b3a6b;
-  color: #fff;
+.lang-globe-btn:hover {
+  opacity: 0.6;
+}
+.lang-globe-btn:focus-visible {
+  outline: 2px solid #1b3a6b;
+  outline-offset: 3px;
+  border-radius: 3px;
 }

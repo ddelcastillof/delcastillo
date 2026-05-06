@@ -52,22 +52,22 @@ docs/fragments/teaching.html: src/teaching.md
 	@mkdir -p docs/fragments
 	pandoc $< -o $@ --wrap=none
 
-# Spanish fragments
+# Spanish fragments — --id-prefix=es- prevents auto-generated ID collisions with EN fragments
 docs/fragments/about.es.html: src/index.es.md
 	@mkdir -p docs/fragments
-	pandoc $< -o $@ --wrap=none
+	pandoc $< -o $@ --wrap=none --id-prefix=es-
 
 docs/fragments/projects.es.html: src/projects.es.md
 	@mkdir -p docs/fragments
-	pandoc $< -o $@ --wrap=none
+	pandoc $< -o $@ --wrap=none --id-prefix=es-
 
 docs/fragments/blog.es.html: src/blog.es.md
 	@mkdir -p docs/fragments
-	pandoc $< -o $@ --wrap=none
+	pandoc $< -o $@ --wrap=none --id-prefix=es-
 
 docs/fragments/teaching.es.html: src/teaching.es.md
 	@mkdir -p docs/fragments
-	pandoc $< -o $@ --wrap=none
+	pandoc $< -o $@ --wrap=none --id-prefix=es-
 
 # Publications page (standalone — all papers, bold-only filter)
 docs/fragments/publications.html: src/publications.md $(BIB) $(CSL) $(BOLD_ONLY)
