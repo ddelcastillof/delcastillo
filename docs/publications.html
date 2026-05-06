@@ -53,8 +53,6 @@ Vidyasagaran, A.L., Ayesha, R., Boehnke, J.R., Kirkham, J., Rose, L., Hurst, J.R
       document.querySelectorAll('.lang-en').forEach(function (el) { el.hidden = lang === 'es'; });
       document.querySelectorAll('.lang-es').forEach(function (el) { el.hidden = lang === 'en'; });
       document.querySelectorAll('[data-en]').forEach(function (el) { el.textContent = el.dataset[lang]; });
-      var btn = document.getElementById('lang-toggle');
-      if (btn) btn.textContent = lang === 'en' ? 'ES' : 'EN';
       document.documentElement.lang = lang;
     }
 
@@ -63,6 +61,23 @@ Vidyasagaran, A.L., Ayesha, R., Boehnke, J.R., Kirkham, J., Rose, L., Hurst, J.R
       localStorage.setItem('lang', next);
       applyLang(next);
     };
+
+    // In ES mode, nav anchor clicks should scroll to the visible ES sibling
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        if (document.documentElement.lang !== 'es') return;
+        var id = link.getAttribute('href').slice(1);
+        var target = document.getElementById(id);
+        if (!target) return;
+        var enBlock = target.closest('.lang-block.lang-en');
+        if (!enBlock) return;
+        var esBlock = enBlock.nextElementSibling;
+        if (esBlock && esBlock.classList.contains('lang-es')) {
+          e.preventDefault();
+          esBlock.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
   })();
   </script>
 </body>
