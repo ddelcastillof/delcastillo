@@ -19,8 +19,6 @@ title: Teaching
 <dl class="teaching-list">
   <dt>Introduction to Epidemiology</dt>
   <dd>Universidad Científica del Sur &centerdot; Undergraduate &centerdot; Current &centerdot; <strong>Instructor</strong></dd>
-  <dt>Thesis Seminar</dt>
-  <dd>Universidad Científica del Sur &centerdot; Undergraduate &centerdot; Current &centerdot; <strong>Instructor</strong></dd>
   <dt>Introduction to Biology</dt>
   <dd>University of Washington &centerdot; Undergraduate &centerdot; 2024 &centerdot; <strong>TA</strong></dd>
   <dt>Biostatistics and Demography</dt>
