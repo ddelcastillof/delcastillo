@@ -12,13 +12,18 @@ FRAGMENTS := docs/fragments/about.html \
              docs/fragments/blog.html \
              docs/fragments/teaching.html
 
+ES_FRAGMENTS := docs/fragments/about.es.html \
+                docs/fragments/projects.es.html \
+                docs/fragments/blog.es.html \
+                docs/fragments/teaching.es.html
+
 .PHONY: build clean
 
 build: docs/index.html docs/publications.html docs/styles.css docs/images
 
-# Assemble single-page site from fragments
-docs/index.html: $(HEAD) $(FOOT) $(FRAGMENTS)
-	cat $(HEAD) $(FRAGMENTS) $(FOOT) > $@
+# Assemble bilingual single-page site via build script
+docs/index.html: $(HEAD) $(FOOT) $(FRAGMENTS) $(ES_FRAGMENTS) scripts/build.sh
+	scripts/build.sh
 
 # About section (from index.md)
 docs/fragments/about.html: src/index.md
@@ -44,6 +49,23 @@ docs/fragments/blog.html: src/blog.md
 
 # Teaching section
 docs/fragments/teaching.html: src/teaching.md
+	@mkdir -p docs/fragments
+	pandoc $< -o $@ --wrap=none
+
+# Spanish fragments
+docs/fragments/about.es.html: src/index.es.md
+	@mkdir -p docs/fragments
+	pandoc $< -o $@ --wrap=none
+
+docs/fragments/projects.es.html: src/projects.es.md
+	@mkdir -p docs/fragments
+	pandoc $< -o $@ --wrap=none
+
+docs/fragments/blog.es.html: src/blog.es.md
+	@mkdir -p docs/fragments
+	pandoc $< -o $@ --wrap=none
+
+docs/fragments/teaching.es.html: src/teaching.es.md
 	@mkdir -p docs/fragments
 	pandoc $< -o $@ --wrap=none
 
