@@ -37,7 +37,7 @@ title: ""
 
 ## Biography
 
-I'm a research assistant in the School of Health and Wellbeing at the [University of Glasgow](https://www.gla.ac.uk/schools/healthwellbeing/staff/darwindelcastillofernandez). My work focuses on using real-world data and causal inference models to inform health policy and practice. <br> I also teach in the School of Medicine at [Universidad Científica del Sur](https://cientifica.edu.pe/) in Peru.
+I'm a research assistant in the School of Health and Wellbeing at the [University of Glasgow](https://www.gla.ac.uk/schools/healthwellbeing/staff/darwindelcastillofernandez). My work focuses on using real-world data and causal inference methods to inform health policy and practice. <br> I also teach in the School of Medicine at [Universidad Científica del Sur](https://cientifica.edu.pe/) in Peru.
 
 ::: {.about-sub-grid}
 

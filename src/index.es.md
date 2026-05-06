@@ -37,7 +37,7 @@ title: ""
 
 ## Biografía
 
-Soy asistente de investigación en la Escuela de Salud y Bienestar de la [Universidad de Glasgow](https://www.gla.ac.uk/schools/healthwellbeing/staff/darwindelcastillofernandez). Mi trabajo se centra en el uso de datos del mundo real y modelos de inferencia causal para informar políticas y prácticas en salud. <br> También enseño en la Escuela de Medicina de la [Universidad Científica del Sur](https://cientifica.edu.pe/) en Perú.
+Soy asistente de investigación en la Escuela de Salud y Bienestar de la [Universidad de Glasgow](https://www.gla.ac.uk/schools/healthwellbeing/staff/darwindelcastillofernandez). Mi trabajo se enfoca en el uso de datos del mundo real e inferencia causal para informar políticas y prácticas en salud. <br> También enseño en la Escuela de Medicina Humana de la [Universidad Científica del Sur](https://cientifica.edu.pe/) en Perú.
 
 ::: {.about-sub-grid}
 
