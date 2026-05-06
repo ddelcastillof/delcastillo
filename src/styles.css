@@ -50,19 +50,16 @@ nav {
 
 /* ── Sections (single-page layout) ───────────── */
 main > section,
-main > .lang-block.lang-en {
+main > .lang-block {
   padding-top: 3rem;
   padding-bottom: 2rem;
   scroll-margin-top: 4rem;
 }
 
-main > .lang-block.lang-en:first-child {
-  padding-top: 4.5rem;
-}
-
 /* Separators between visible sections */
 main > .lang-block.lang-en ~ section,
-main > section ~ .lang-block.lang-en {
+main > section ~ .lang-block.lang-en,
+main > section ~ .lang-block.lang-es {
   border-top: 1px solid #e0e8f4;
 }
 
