@@ -30,6 +30,15 @@ A brief summary of a topic rarely covered in postgraduate epidemiology courses.
 
 ---
 
+### A definition of effect modification and interaction under the potential outcomes framework
+
+*[Apr 2026]*
+
+What is a CATE and how does it relate to other traditional estimates, such as RERI
+
+[Read more](#) <!-- replace # with link to full post (Quarto HTML, RPubs, etc.) -->
+
+---
 :::
 
 :::
