@@ -44,5 +44,26 @@ Vidyasagaran, A.L., Ayesha, R., Boehnke, J.R., Kirkham, J., Rose, L., Hurst, J.R
        <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
     </p>
   </footer>
+  <script>
+  (function () {
+    var saved = localStorage.getItem('lang') || 'en';
+    if (saved === 'es') applyLang('es');
+
+    function applyLang(lang) {
+      document.querySelectorAll('.lang-en').forEach(function (el) { el.hidden = lang === 'es'; });
+      document.querySelectorAll('.lang-es').forEach(function (el) { el.hidden = lang === 'en'; });
+      document.querySelectorAll('[data-en]').forEach(function (el) { el.textContent = el.dataset[lang]; });
+      var btn = document.getElementById('lang-toggle');
+      if (btn) btn.textContent = lang === 'en' ? 'ES' : 'EN';
+      document.documentElement.lang = lang;
+    }
+
+    window.toggleLang = function () {
+      var next = document.documentElement.lang === 'en' ? 'es' : 'en';
+      localStorage.setItem('lang', next);
+      applyLang(next);
+    };
+  })();
+  </script>
 </body>
 </html>

@@ -26,7 +26,8 @@ wrap_pair() {
 {
   cat "$HEAD"
   wrap_pair about
-  wrap_pair research   # EN-only: no .es.html counterpart
+  # Research is EN-only — emit without lang-block wrapper so it stays visible in both languages
+  cat "docs/fragments/research.html"
   wrap_pair projects
   wrap_pair blog
   wrap_pair teaching
