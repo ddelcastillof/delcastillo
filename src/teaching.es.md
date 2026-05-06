@@ -2,13 +2,13 @@
 title: Docencia
 ---
 
-<section id="teaching">
+<section>
 
 ::: {.section-grid}
 
 ::: {.section-title}
 
-# Docencia {#teaching-title}
+# Docencia
 
 :::
 

@@ -2,13 +2,13 @@
 title: Blog
 ---
 
-<section id="blog">
+<section>
 
 ::: {.section-grid}
 
 ::: {.section-title}
 
-# Blog {#blog-title}
+# Blog
 
 :::
 

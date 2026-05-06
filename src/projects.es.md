@@ -2,13 +2,13 @@
 title: Proyectos
 ---
 
-<section id="projects">
+<section>
 
 ::: {.section-grid}
 
 ::: {.section-title}
 
-# Proyectos {#projects-title}
+# Proyectos
 
 :::
 

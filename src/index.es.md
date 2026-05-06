@@ -2,7 +2,7 @@
 title: ""
 ---
 
-<section id="about">
+<section>
 
 ::: {.about-grid}
 
