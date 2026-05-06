@@ -49,13 +49,20 @@ nav {
 }
 
 /* ── Sections (single-page layout) ───────────── */
-main > section {
+main > section,
+main > .lang-block.lang-en {
   padding-top: 3rem;
   padding-bottom: 2rem;
   scroll-margin-top: 4rem;
 }
 
-main > section + section {
+main > .lang-block.lang-en:first-child {
+  padding-top: 4.5rem;
+}
+
+/* Separators between visible sections */
+main > .lang-block.lang-en ~ section,
+main > section ~ .lang-block.lang-en {
   border-top: 1px solid #e0e8f4;
 }
 
@@ -119,6 +126,7 @@ li { margin-bottom: 0.35rem; }
 .about-left {
   flex: 0 0 185px;
   text-align: center;
+  margin-top: 0.75rem;
 }
 
 .about-right {
