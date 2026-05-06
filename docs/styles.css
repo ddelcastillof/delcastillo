@@ -283,6 +283,21 @@ dl.teaching-list dd {
   color: #555;
 }
 
+/* ── Slide language badge ─────────────────────── */
+.slide-lang {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.05rem 0.35rem;
+  border-radius: 3px;
+  vertical-align: middle;
+  line-height: 1.7;
+  margin-left: 0.3rem;
+  background: #e8eef7;
+  color: #1b3a6b;
+}
+
 .section-body ol li,
 .section-body ul li {
   font-size: 0.95rem;

@@ -29,7 +29,7 @@ title: Docencia
 
 <dl class="teaching-list">
   <dt>Cómo identificar una pregunta de investigación viable</dt>
-  <dd>Universidad Nacional Mayor de San Marcos &centerdot; Perú &centerdot; 2026 &centerdot; <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://github.com/ddelcastillof/seminars_slides/blob/main/seed_lab_2026/slides/Lecture01_Pregunta_Investigable.pdf">Diapositivas</a></dd>
+  <dd>Universidad Nacional Mayor de San Marcos &centerdot; Perú &centerdot; 2026 &centerdot; <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://github.com/ddelcastillof/seminars_slides/blob/main/seed_lab_2026/slides/Lecture01_Pregunta_Investigable.pdf">Diapositivas</a> <span class="slide-lang">ES</span></dd>
   <dt>Introducción a Stata para Investigadores Biomédicos</dt>
   <dd>Instituto Nacional de Salud &centerdot; Perú &centerdot; 2022</dd>
 </dl>
