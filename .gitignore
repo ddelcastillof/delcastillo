@@ -3,6 +3,7 @@ CLAUDE.md
 /images/
 src/data-*.csv
 docs/plans/
+docs/specs/
 docs/superpowers/
 .vscode/
 .claude/
