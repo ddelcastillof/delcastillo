@@ -1,91 +1,44 @@
-BIB    := src/references.bib
-CSL    := csl/harvard-cite-them-right-no-et-al.csl
-FILTER := src/bold-author.lua
-BOLD_ONLY  := src/bold-only.lua
-PUBS_HEAD  := src/head-pubs.html
-HEAD   := src/head.html
-FOOT   := src/foot.html
+BIB       := src/references.bib
+CSL       := csl/harvard-cite-them-right-no-et-al.csl
+FILTER    := src/bold-author.lua
+BOLD_ONLY := src/bold-only.lua
+PUBS_HEAD := src/head-pubs.html
+FOOT      := src/foot.html
 
-FRAGMENTS := docs/fragments/about.html \
-             docs/fragments/research.html \
-             docs/fragments/projects.html \
-             docs/fragments/blog.html \
-             docs/fragments/teaching.html
+.PHONY: all publications styles clean
 
-ES_FRAGMENTS := docs/fragments/about.es.html \
-                docs/fragments/projects.es.html \
-                docs/fragments/blog.es.html \
-                docs/fragments/teaching.es.html
+all: docs/index.html docs/publications.html docs/styles.css docs/images
 
-.PHONY: build clean
+# Assemble main page from 3 parts
+docs/index.html: src/head-manual.html docs/fragments/research.html src/tail-manual.html
+	cat src/head-manual.html docs/fragments/research.html src/tail-manual.html > $@
 
-build: docs/index.html docs/publications.html docs/styles.css docs/images
-
-# Assemble bilingual single-page site via build script
-docs/index.html: $(HEAD) $(FOOT) $(FRAGMENTS) $(ES_FRAGMENTS) scripts/build.sh
-	scripts/build.sh
-
-# About section (from index.md)
-docs/fragments/about.html: src/index.md
-	@mkdir -p docs/fragments
-	pandoc $< -o $@ --wrap=none
-
-# Research section — uses citeproc + Lua filter to bold author name
+# Research fragment — featured (1st/2nd author) entries from references.bib
 docs/fragments/research.html: src/research.md $(BIB) $(CSL) $(FILTER)
 	@mkdir -p docs/fragments
 	pandoc $< -o $@ --wrap=none \
 	  --citeproc --bibliography=$(BIB) --csl=$(CSL) \
 	  --lua-filter=$(FILTER)
 
-# Projects section
-docs/fragments/projects.html: src/projects.md
-	@mkdir -p docs/fragments
-	pandoc $< -o $@ --wrap=none
+# Standalone publications page
+docs/publications.html: $(PUBS_HEAD) $(FOOT) docs/fragments/publications.html
+	cat $(PUBS_HEAD) docs/fragments/publications.html $(FOOT) > $@
 
-# Blog section
-docs/fragments/blog.html: src/blog.md
-	@mkdir -p docs/fragments
-	pandoc $< -o $@ --wrap=none
-
-# Teaching section
-docs/fragments/teaching.html: src/teaching.md
-	@mkdir -p docs/fragments
-	pandoc $< -o $@ --wrap=none
-
-# Spanish fragments — --id-prefix=es- prevents auto-generated ID collisions with EN fragments
-docs/fragments/about.es.html: src/index.es.md
-	@mkdir -p docs/fragments
-	pandoc $< -o $@ --wrap=none --id-prefix=es-
-
-docs/fragments/projects.es.html: src/projects.es.md
-	@mkdir -p docs/fragments
-	pandoc $< -o $@ --wrap=none --id-prefix=es-
-
-docs/fragments/blog.es.html: src/blog.es.md
-	@mkdir -p docs/fragments
-	pandoc $< -o $@ --wrap=none --id-prefix=es-
-
-docs/fragments/teaching.es.html: src/teaching.es.md
-	@mkdir -p docs/fragments
-	pandoc $< -o $@ --wrap=none --id-prefix=es-
-
-# Publications page (standalone — all papers, bold-only filter)
 docs/fragments/publications.html: src/publications.md $(BIB) $(CSL) $(BOLD_ONLY)
 	@mkdir -p docs/fragments
 	pandoc $< -o $@ --wrap=none \
 	  --citeproc --bibliography=$(BIB) --csl=$(CSL) \
 	  --lua-filter=$(BOLD_ONLY)
 
-docs/publications.html: $(PUBS_HEAD) $(FOOT) docs/fragments/publications.html
-	cat $(PUBS_HEAD) docs/fragments/publications.html $(FOOT) > $@
-
-# Copy stylesheet
 docs/styles.css: src/styles.css
 	cp $< $@
 
-# Copy images directory
+styles: docs/styles.css
+
 docs/images: images
 	cp -r images docs/images
+
+publications: docs/publications.html
 
 clean:
 	rm -f docs/index.html docs/publications.html docs/styles.css
