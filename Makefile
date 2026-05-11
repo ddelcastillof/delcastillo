@@ -33,11 +33,13 @@ docs/fragments/publications.html: src/publications.md $(BIB) $(CSL) $(BOLD_ONLY)
 docs/styles.css: src/styles.css
 	cp $< $@
 
+# Convenience alias: rebuild stylesheet only
 styles: docs/styles.css
 
 docs/images: images
-	cp -r images docs/images
+	rm -rf $@ && cp -r $< $@
 
+# Convenience alias: rebuild publications page only (e.g. after updating references.bib)
 publications: docs/publications.html
 
 clean:
