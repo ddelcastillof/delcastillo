@@ -172,7 +172,7 @@ li { margin-bottom: 0.35rem; }
 /* ── Portrait title (left column) ─────────────── */
 .portrait-title h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--color-text);
   margin: 0 0 0.25rem;
