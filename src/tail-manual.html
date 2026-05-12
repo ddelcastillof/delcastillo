@@ -1,0 +1,141 @@
+  <!-- ── English: Posts, Teaching & Talks ────── -->
+  <div class="lang-block lang-en">
+
+    <section id="posts" class="site-section">
+      <div class="section-label">Posts</div>
+      <ul class="post-list">
+        <li>
+          <a href="#" class="post-title"><span class="post-cat">Methods</span>A definition of effect modification and interaction under the potential outcomes framework</a>
+          <span class="post-date">Apr 2026</span>
+        </li>
+        <li>
+          <a href="#" class="post-title"><span class="post-cat">Methods</span>A short trip through mediation analysis</a>
+          <span class="post-date">Mar 2026</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="teaching" class="site-section">
+      <div class="section-label">Teaching &amp; Talks</div>
+
+      <h3>Courses</h3>
+      <dl class="teaching-list">
+        <dt>Introduction to Epidemiology</dt>
+        <dd>Universidad Científica del Sur &centerdot; Undergraduate &centerdot; Current &centerdot; <strong>Instructor</strong></dd>
+        <dt>Introduction to Biology</dt>
+        <dd>University of Washington &centerdot; Undergraduate &centerdot; 2024 &centerdot; <strong>TA</strong></dd>
+        <dt>Biostatistics and Demography</dt>
+        <dd>Universidad Nacional Mayor de San Marcos &centerdot; Undergraduate &centerdot; 2020 &centerdot; <strong>TA</strong></dd>
+      </dl>
+
+      <h3>Seminars</h3>
+      <dl class="teaching-list">
+        <dt>How to identify a viable research question</dt>
+        <dd>Universidad Nacional Mayor de San Marcos &centerdot; Peru &centerdot; 2026 &centerdot; <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://github.com/ddelcastillof/seminars_slides/blob/main/seed_lab_2026/slides/Lecture01_Pregunta_Investigable.pdf">Slides</a> <span class="slide-lang">ES</span></dd>
+        <dt>Introduction to Stata for Biomedical Researchers</dt>
+        <dd>National Institute of Health &centerdot; Peru &centerdot; 2022</dd>
+      </dl>
+    </section>
+
+  </div><!-- end .lang-block.lang-en -->
+
+  <!-- ── Spanish: Posts, Docencia y Charlas ───── -->
+  <div class="lang-block lang-es" lang="es" hidden>
+
+    <section id="es-posts" class="site-section">
+      <div class="section-label">Posts</div>
+      <ul class="post-list">
+        <li>
+          <a href="#" class="post-title"><span class="post-cat">Métodos</span>Una definición de modificación de efecto e interacción bajo el marco de resultados potenciales</a>
+          <span class="post-date">Abr 2026</span>
+        </li>
+        <li>
+          <a href="#" class="post-title"><span class="post-cat">Métodos</span>Un breve recorrido por el análisis de mediación</a>
+          <span class="post-date">Mar 2026</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="es-teaching" class="site-section">
+      <div class="section-label">Docencia y Charlas</div>
+
+      <h3>Cursos</h3>
+      <dl class="teaching-list">
+        <dt>Introducción a la Epidemiología</dt>
+        <dd>Universidad Científica del Sur &centerdot; Pregrado &centerdot; Actual &centerdot; <strong>Docente</strong></dd>
+        <dt>Introducción a la Biología</dt>
+        <dd>Universidad de Washington &centerdot; Pregrado &centerdot; 2024 &centerdot; <strong>Asistente de Cátedra</strong></dd>
+        <dt>Bioestadística y Demografía</dt>
+        <dd>Universidad Nacional Mayor de San Marcos &centerdot; Pregrado &centerdot; 2020 &centerdot; <strong>Asistente de Cátedra</strong></dd>
+      </dl>
+
+      <h3>Seminarios</h3>
+      <dl class="teaching-list">
+        <dt>Cómo identificar una pregunta de investigación viable</dt>
+        <dd>Universidad Nacional Mayor de San Marcos &centerdot; Perú &centerdot; 2026 &centerdot; <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://github.com/ddelcastillof/seminars_slides/blob/main/seed_lab_2026/slides/Lecture01_Pregunta_Investigable.pdf">Diapositivas</a> <span class="slide-lang">ES</span></dd>
+        <dt>Introducción a Stata para Investigadores Biomédicos</dt>
+        <dd>Instituto Nacional de Salud &centerdot; Perú &centerdot; 2022</dd>
+      </dl>
+    </section>
+
+  </div><!-- end .lang-block.lang-es -->
+
+  </main>
+  <footer>
+    <p>Darwin Del Castillo &middot;
+       <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>
+    </p>
+  </footer>
+  <script>
+  (function () {
+    /* ── Language toggle ── */
+    var savedLang = localStorage.getItem('lang') || 'en';
+    if (savedLang === 'es') applyLang('es');
+
+    function applyLang(lang) {
+      document.querySelectorAll('.lang-en').forEach(function (el) { el.hidden = lang === 'es'; });
+      document.querySelectorAll('.lang-es').forEach(function (el) { el.hidden = lang === 'en'; });
+      document.querySelectorAll('[data-en]').forEach(function (el) { el.textContent = el.dataset[lang]; });
+      document.documentElement.lang = lang;
+    }
+
+    window.toggleLang = function () {
+      var next = document.documentElement.lang === 'en' ? 'es' : 'en';
+      localStorage.setItem('lang', next);
+      applyLang(next);
+    };
+
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        if (document.documentElement.lang !== 'es') return;
+        var id = link.getAttribute('href').slice(1);
+        var target = document.getElementById(id);
+        if (!target) return;
+        var enBlock = target.closest('.lang-block.lang-en');
+        if (!enBlock) return;
+        var esBlock = enBlock.nextElementSibling;
+        if (esBlock && esBlock.classList.contains('lang-es')) {
+          e.preventDefault();
+          esBlock.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    /* ── Dark mode toggle ── */
+    var savedTheme = localStorage.getItem('theme') || 'light';
+    if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+
+    window.toggleTheme = function () {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      if (next === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+    };
+  })();
+  </script>
+</body>
+</html>
