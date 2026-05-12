@@ -8,130 +8,129 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav>
     <a class="nav-home" href="#about">Darwin Del Castillo</a>
     <div class="nav-links">
-      <a href="#research" data-en="Research" data-es="Investigación">Research</a>
-      <a href="#projects" data-en="Projects" data-es="Proyectos">Projects</a>
-      <a href="#blog" data-en="Blog" data-es="Blog">Blog</a>
+      <a href="#research" data-en="Publications" data-es="Publicaciones">Publications</a>
+      <a href="#posts" data-en="Posts" data-es="Posts">Posts</a>
       <a href="#teaching" data-en="Teaching" data-es="Docencia">Teaching</a>
+      <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/ddelcastillof/cv/main/cv.pdf" target="_blank" rel="noopener" data-en="CV" data-es="CV">CV</a>
       <button class="lang-globe-btn" id="lang-toggle" onclick="toggleLang()" title="Switch language / Cambiar idioma" aria-label="Switch language"><i class="fa-solid fa-globe"></i></button>
+      <button class="theme-toggle-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
     </div>
   </nav>
-  <main><div class="lang-block lang-en">
-<section id="about">
-<div class="about-grid">
-<div class="about-left">
-<p><img src="images/my-picture.jpg" alt="Darwin Del Castillo" class="profile-img"></p>
-<div class="portrait-title">
-<h2>
-Darwin Del Castillo
-</h2>
-<p class="about-role">
-Research Assistant
-</p>
-<p class="about-inst">
-School of Health and Wellbeing<br>University of Glasgow
-</p>
+  <main>
+
+  <!-- ── English: About, Interests, Education ─── -->
+  <div class="lang-block lang-en">
+
+    <section id="about">
+      <div class="about-grid">
+        <div class="about-left">
+          <img src="images/my-picture.jpg" alt="Darwin Del Castillo" class="profile-img">
+          <div class="portrait-title">
+            <div class="about-name">Darwin Del Castillo, <span class="name-credentials">MD, MPH</span></div>
+            <p class="about-tagline">Physician-Scientist · Causal Inference · Epidemiology of NCDs</p>
+            <p class="about-affil">Research Assistant, University of Glasgow<br>Instructor, Universidad Científica del Sur</p>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/ddelcastillof" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://bsky.app/profile/justpvalues.bsky.social" target="_blank" rel="noopener" title="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+            <a href="https://www.linkedin.com/in/ddelcastillof/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?user=iNdNU5QAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+            <a href="mailto:darwin.delcastillofernandez@glasgow.ac.uk" rel="noopener" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/ddelcastillof/cv/main/cv.pdf" target="_blank" rel="noopener" title="My CV"><i class="fa-solid fa-id-card"></i></a>
+          </div>
+          <div class="book-meeting">
+            <a href="https://outlook.office.com/bookwithme/user/0afa5d81a51548549f8b4a1d265159dd@glasgow.ac.uk/meetingtype/iWNid_4rGUu2yaqkD46oNg2?anonymous&amp;ismsaljsauthenabled&amp;ep=mlink" class="book-meeting-btn" target="_blank" rel="noopener">
+              <i class="fa-solid fa-calendar-check"></i> Book a meeting
+            </a>
+          </div>
+        </div>
+        <div class="about-right">
+          <p class="about-bio-lead">Using real-world data and causal inference to understand the burden of non-communicable diseases and inform health policy — with a focus on low- and middle-income countries.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests" class="site-section">
+      <div class="section-label">Interests</div>
+      <ul>
+        <li>Causal inference</li>
+        <li>Epidemiology of NCDs</li>
+        <li>Real-world evidence and disease modelling</li>
+        <li>Global health</li>
+      </ul>
+    </section>
+
+    <section id="education" class="site-section">
+      <div class="section-label">Education</div>
+      <ul class="edu-list">
+        <li><i class="fa-solid fa-graduation-cap"></i><span class="edu-text"><span class="edu-degree">Master of Public Health, 2025</span><span class="edu-inst">University of Washington</span></span></li>
+        <li><i class="fa-solid fa-graduation-cap"></i><span class="edu-text"><span class="edu-degree">Doctor of Medicine, 2021</span><span class="edu-inst">Universidad Nacional Mayor de San Marcos</span></span></li>
+      </ul>
+    </section>
+
+  </div><!-- end .lang-block.lang-en -->
+
+  <!-- ── Spanish: Sobre mí, Intereses, Educación ─ -->
+  <div class="lang-block lang-es" lang="es" hidden>
+
+    <section id="es-about">
+      <div class="about-grid">
+        <div class="about-left">
+          <img src="images/my-picture.jpg" alt="Darwin Del Castillo" class="profile-img">
+          <div class="portrait-title">
+            <div class="about-name">Darwin Del Castillo, <span class="name-credentials">MD, MPH</span></div>
+            <p class="about-tagline">Médico-Científico · Inferencia Causal · Epidemiología de ENT</p>
+            <p class="about-affil">Asistente de Investigación, Universidad de Glasgow<br>Docente, Universidad Científica del Sur</p>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/ddelcastillof" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://bsky.app/profile/justpvalues.bsky.social" target="_blank" rel="noopener" title="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+            <a href="https://www.linkedin.com/in/ddelcastillof/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?user=iNdNU5QAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+            <a href="mailto:darwin.delcastillofernandez@glasgow.ac.uk" rel="noopener" title="Correo"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/ddelcastillof/cv/main/cv.pdf" target="_blank" rel="noopener" title="Mi CV"><i class="fa-solid fa-id-card"></i></a>
+          </div>
+          <div class="book-meeting">
+            <a href="https://outlook.office.com/bookwithme/user/0afa5d81a51548549f8b4a1d265159dd@glasgow.ac.uk/meetingtype/iWNid_4rGUu2yaqkD46oNg2?anonymous&amp;ismsaljsauthenabled&amp;ep=mlink" class="book-meeting-btn" target="_blank" rel="noopener">
+              <i class="fa-solid fa-calendar-check"></i> Agendar reunión
+            </a>
+          </div>
+        </div>
+        <div class="about-right">
+          <p class="about-bio-lead">Usando datos del mundo real e inferencia causal para comprender la carga de enfermedades no transmisibles e informar políticas de salud — con énfasis en países de ingresos bajos y medios.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="es-interests" class="site-section">
+      <div class="section-label">Intereses</div>
+      <ul>
+        <li>Inferencia causal</li>
+        <li>Epidemiología de enfermedades no transmisibles</li>
+        <li>Evidencia del mundo real y modelado de enfermedades</li>
+        <li>Salud global</li>
+      </ul>
+    </section>
+
+    <section id="es-education" class="site-section">
+      <div class="section-label">Educación</div>
+      <ul class="edu-list">
+        <li><i class="fa-solid fa-graduation-cap"></i><span class="edu-text"><span class="edu-degree">Maestría en Salud Pública, 2025</span><span class="edu-inst">Universidad de Washington</span></span></li>
+        <li><i class="fa-solid fa-graduation-cap"></i><span class="edu-text"><span class="edu-degree">Doctor en Medicina, 2021</span><span class="edu-inst">Universidad Nacional Mayor de San Marcos</span></span></li>
+      </ul>
+    </section>
+
+  </div><!-- end .lang-block.lang-es -->
+<section id="research" class="site-section">
+<div class="section-label">
+Publications
 </div>
-<div class="social-links">
-<p><a href="https://github.com/ddelcastillof" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a> <a href="https://bsky.app/profile/justpvalues.bsky.social" target="_blank" rel="noopener" title="Bluesky"><i class="fa-brands fa-bluesky"></i></a> <a href="https://www.linkedin.com/in/ddelcastillof/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a> <a href="https://scholar.google.com/citations?user=iNdNU5QAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a> <a href="mailto:darwin.delcastillofernandez@glasgow.ac.uk" rel="noopener" title="Email"><i class="fa-solid fa-envelope"></i></a> <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/ddelcastillof/cv/main/cv.pdf" target="_blank" rel="noopener" title="My CV"><i class="fa-solid fa-id-card"></i></a></p>
-</div>
-<div class="book-meeting">
-<p><a href="https://outlook.office.com/bookwithme/user/0afa5d81a51548549f8b4a1d265159dd@glasgow.ac.uk/meetingtype/iWNid_4rGUu2yaqkD46oNg2?anonymous&ismsaljsauthenabled&ep=mlink" class="book-meeting-btn" target="_blank" rel="noopener"> <i class="fa-solid fa-calendar-check"></i> Book a meeting </a></p>
-</div>
-</div>
-<section id="biography" class="about-right">
-<h2>Biography</h2>
-<p>I’m a research assistant in the School of Health and Wellbeing at the <a href="https://www.gla.ac.uk/schools/healthwellbeing/staff/darwindelcastillofernandez">University of Glasgow</a>. My work focuses on using real-world data and causal inference methods to inform health policy and practice. <br> I also teach in the School of Medicine at <a href="https://cientifica.edu.pe/">Universidad Científica del Sur</a> in Peru.</p>
-<div class="about-sub-grid">
-<section id="interests" class="about-sub-col">
-<h3>Interests</h3>
-<ul>
-<li>Causal inference</li>
-<li>Epidemiology of NCDs</li>
-<li>Real-world evidence and disease modelling</li>
-<li>Global health</li>
-</ul>
-</section>
-<section id="education" class="about-sub-col">
-<h3>Education</h3>
-<ul class="edu-list">
-<li>
-<i class="fa-solid fa-graduation-cap"></i><span class="edu-text"><span class="edu-degree">Master of Public Health, 2025</span><span class="edu-inst">University of Washington</span></span>
-</li>
-<li>
-<i class="fa-solid fa-graduation-cap"></i><span class="edu-text"><span class="edu-degree">Doctor of Medicine, 2021</span><span class="edu-inst">Universidad Nacional Mayor de San Marcos</span></span>
-</li>
-</ul>
-</section>
-</div>
-</section>
-</div>
-</section>
-</div>
-<div class="lang-block lang-es" hidden>
-<section>
-<div class="about-grid">
-<div class="about-left">
-<p><img src="images/my-picture.jpg" alt="Darwin Del Castillo" class="profile-img"></p>
-<div class="portrait-title">
-<h2>
-Darwin Del Castillo
-</h2>
-<p class="about-role">
-Asistente de Investigación
-</p>
-<p class="about-inst">
-Escuela de Salud y Bienestar<br>Universidad de Glasgow
-</p>
-</div>
-<div class="social-links">
-<p><a href="https://github.com/ddelcastillof" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a> <a href="https://bsky.app/profile/justpvalues.bsky.social" target="_blank" rel="noopener" title="Bluesky"><i class="fa-brands fa-bluesky"></i></a> <a href="https://www.linkedin.com/in/ddelcastillof/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a> <a href="https://scholar.google.com/citations?user=iNdNU5QAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a> <a href="mailto:darwin.delcastillofernandez@glasgow.ac.uk" rel="noopener" title="Correo"><i class="fa-solid fa-envelope"></i></a> <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/ddelcastillof/cv/main/cv.pdf" target="_blank" rel="noopener" title="Mi CV"><i class="fa-solid fa-id-card"></i></a></p>
-</div>
-<div class="book-meeting">
-<p><a href="https://outlook.office.com/bookwithme/user/0afa5d81a51548549f8b4a1d265159dd@glasgow.ac.uk/meetingtype/iWNid_4rGUu2yaqkD46oNg2?anonymous&ismsaljsauthenabled&ep=mlink" class="book-meeting-btn" target="_blank" rel="noopener"> <i class="fa-solid fa-calendar-check"></i> Agendar reunión </a></p>
-</div>
-</div>
-<section id="es-biografía" class="about-right">
-<h2>Biografía</h2>
-<p>Soy asistente de investigación en la Escuela de Salud y Bienestar de la <a href="https://www.gla.ac.uk/schools/healthwellbeing/staff/darwindelcastillofernandez">Universidad de Glasgow</a>. Mi trabajo se enfoca en el uso de datos del mundo real e inferencia causal para informar políticas y prácticas en salud. <br> También enseño en la Escuela de Medicina Humana de la <a href="https://cientifica.edu.pe/">Universidad Científica del Sur</a> en Perú.</p>
-<div class="about-sub-grid">
-<section id="es-intereses" class="about-sub-col">
-<h3>Intereses</h3>
-<ul>
-<li>Inferencia causal</li>
-<li>Epidemiología de enfermedades no transmisibles</li>
-<li>Evidencia del mundo real y modelado de enfermedades</li>
-<li>Salud global</li>
-</ul>
-</section>
-<section id="es-educación" class="about-sub-col">
-<h3>Educación</h3>
-<ul class="edu-list">
-<li>
-<i class="fa-solid fa-graduation-cap"></i><span class="edu-text"><span class="edu-degree">Maestría en Salud Pública, 2025</span><span class="edu-inst">Universidad de Washington</span></span>
-</li>
-<li>
-<i class="fa-solid fa-graduation-cap"></i><span class="edu-text"><span class="edu-degree">Doctor en Medicina, 2021</span><span class="edu-inst">Universidad Nacional Mayor de San Marcos</span></span>
-</li>
-</ul>
-</section>
-</div>
-</section>
-</div>
-</section>
-</div>
-<section id="research">
-<div class="section-grid">
-<section id="research-title" class="section-title">
-<h1>Research</h1>
-</section>
-<section id="peer-reviewed-manuscripts" class="section-body">
-<h2>Peer-Reviewed Manuscripts</h2>
 <div id="refs" class="references csl-bib-body" role="list">
 <div id="ref-Bazo-Alvarez2026-yz" class="csl-entry" role="listitem">
 Bazo-Alvarez, J.C., <strong>Del Castillo, D.,</strong> Piza, L., Bernabé-Ortiz, A., Carrillo-Larco, R.M., Smeeth, L., Gilman, R.H., Checkley, W. and Miranda, J.J. (2026) <span>“Multimorbidity patterns, sociodemographic characteristics, and mortality: Data science insights from low-resource settings,”</span> <em>Am. J. Epidemiol.</em>, 194(4), pp. 901–911. Available at: <a href="https://doi.org/10.1093/aje/kwae466">https://doi.org/10.1093/aje/kwae466</a>.
@@ -142,193 +141,104 @@ Bazo-Alvarez, J.C., <strong>Del Castillo, D.,</strong> Piza, L., Bernabé-Ortiz,
 <p class="pub-see-all"><a href="publications.html">See all publications →</a></p>
 </div>
 </section>
-</div>
-</section>
-<div class="lang-block lang-en">
-<section id="projects">
-<div class="section-grid">
-<section id="projects-title" class="section-title">
-<h1>Projects</h1>
-</section>
-<section id="multimorbidity-clusters-in-peruvian-population" class="section-body">
-<h2>Multimorbidity clusters in Peruvian population</h2>
-<p><strong>Tools:</strong> R · <code>cluster</code> <br> <strong>Methods:</strong> Partition around medoids <br> <strong>Data:</strong> Synthetic data using created from the <a href="https://doi.org/10.6084/m9.figshare.7482128">CRONICAS Cohort - Baseline</a> dataset. <br></p>
-<p><a href="#">View analysis</a> <!-- replace # with link to rendered report or GitHub --></p>
-</section>
-</div>
-</section>
-</div>
-<div class="lang-block lang-es" hidden>
-<section>
-<div class="section-grid">
-<section id="es-proyectos" class="section-title">
-<h1>Proyectos</h1>
-</section>
-<section id="es-clústeres-de-multimorbilidad-en-la-población-peruana" class="section-body">
-<h2>Clústeres de multimorbilidad en la población peruana</h2>
-<p><strong>Herramientas:</strong> R · <code>cluster</code> <br> <strong>Métodos:</strong> Partición alrededor de medoides <br> <strong>Datos:</strong> Datos sintéticos creados a partir del conjunto de datos <a href="https://doi.org/10.6084/m9.figshare.7482128">CRONICAS Cohorte - Línea de Base</a>. <br></p>
-<p><a href="#es-">Ver análisis</a> <!-- reemplazar # con enlace al informe o repositorio GitHub --></p>
-</section>
-</div>
-</section>
-</div>
-<div class="lang-block lang-en">
-<section id="blog">
-<div class="section-grid">
-<section id="blog-title" class="section-title">
-<h1>Blog</h1>
-</section>
-<section id="methods-notes" class="section-body">
-<h2>Methods Notes</h2>
-<p>Short technical posts, annotated code, worked examples, and things I had to figure out the hard way.</p>
-<hr />
-<h3 id="a-short-trip-through-mediation-analysis">A short trip through mediation analysis</h3>
-<p><em>[Mar 2026]</em></p>
-<p>A brief summary of a topic rarely covered in postgraduate epidemiology courses.</p>
-<p><a href="#">Read more</a> <!-- replace # with link to full post (Quarto HTML, RPubs, etc.) --></p>
-<hr />
-<h3 id="a-definition-of-effect-modification-and-interaction-under-the-potential-outcomes-framework">A definition of effect modification and interaction under the potential outcomes framework</h3>
-<p><em>[Apr 2026]</em></p>
-<p>What is a CATE and how does it relate to other traditional estimates, such as RERI</p>
-<p><a href="#">Read more</a> <!-- replace # with link to full post (Quarto HTML, RPubs, etc.) --></p>
-<hr />
-</section>
-</div>
-</section>
-</div>
-<div class="lang-block lang-es" hidden>
-<section>
-<div class="section-grid">
-<section id="es-blog" class="section-title">
-<h1>Blog</h1>
-</section>
-<section id="es-notas-de-métodos" class="section-body">
-<h2>Notas de Métodos</h2>
-<p>Publicaciones técnicas breves, código anotado, ejemplos resueltos y cosas que tuve que descubrir por las malas.</p>
-<hr />
-<h3 id="es-un-breve-recorrido-por-el-análisis-de-mediación">Un breve recorrido por el análisis de mediación</h3>
-<p><em>[Mar 2026]</em></p>
-<p>Un resumen breve de un tema raramente cubierto en los cursos de posgrado en epidemiología.</p>
-<p><a href="#es-">Leer más</a> <!-- reemplazar # con enlace a la publicación completa --></p>
-<hr />
-<h3 id="es-una-definición-de-modificación-de-efecto-e-interacción-bajo-el-marco-de-resultados-potenciales">Una definición de modificación de efecto e interacción bajo el marco de resultados potenciales</h3>
-<p><em>[Abr 2026]</em></p>
-<p>Qué es un CATE y cómo se relaciona con otros estimados tradicionales, como RERI.</p>
-<p><a href="#es-">Leer más</a> <!-- reemplazar # con enlace a la publicación completa --></p>
-<hr />
-</section>
-</div>
-</section>
-</div>
-<div class="lang-block lang-en">
-<section id="teaching">
-<div class="section-grid">
-<section id="teaching-title" class="section-title">
-<h1>Teaching</h1>
-</section>
-<div class="section-body">
-<h2 id="courses">Courses</h2>
-<dl class="teaching-list">
-<dt>
-Introduction to Epidemiology
-</dt>
-<dd>
-Universidad Científica del Sur · Undergraduate · Current · <strong>Instructor</strong>
-</dd>
-<dt>
-Introduction to Biology
-</dt>
-<dd>
-University of Washington · Undergraduate · 2024 · <strong>TA</strong>
-</dd>
-<dt>
-Biostatistics and Demography
-</dt>
-<dd>
-Universidad Nacional Mayor de San Marcos · Undergraduate · 2020 · <strong>TA</strong>
-</dd>
-</dl>
-<h2 id="seminars">Seminars</h2>
-<dl class="teaching-list">
-<dt>
-How to identify a viable research question
-</dt>
-<dd>
-Universidad Nacional Mayor de San Marcos · Peru · 2026 · <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://github.com/ddelcastillof/seminars_slides/blob/main/seed_lab_2026/slides/Lecture01_Pregunta_Investigable.pdf">Slides</a> <span class="slide-lang">ES</span>
-</dd>
-<dt>
-Introduction to Stata for Biomedical Researchers
-</dt>
-<dd>
-National Institute of Health · Peru · 2022
-</dd>
-</dl>
-</div>
-</div>
-</section>
-</div>
-<div class="lang-block lang-es" hidden>
-<section>
-<div class="section-grid">
-<section id="es-docencia" class="section-title">
-<h1>Docencia</h1>
-</section>
-<div class="section-body">
-<h2 id="es-cursos">Cursos</h2>
-<dl class="teaching-list">
-<dt>
-Introducción a la Epidemiología
-</dt>
-<dd>
-Universidad Científica del Sur · Pregrado · Actual · <strong>Docente</strong>
-</dd>
-<dt>
-Introducción a la Biología
-</dt>
-<dd>
-Universidad de Washington · Pregrado · 2024 · <strong>Asistente de Cátedra</strong>
-</dd>
-<dt>
-Bioestadística y Demografía
-</dt>
-<dd>
-Universidad Nacional Mayor de San Marcos · Pregrado · 2020 · <strong>Asistente de Cátedra</strong>
-</dd>
-</dl>
-<h2 id="es-seminarios">Seminarios</h2>
-<dl class="teaching-list">
-<dt>
-Cómo identificar una pregunta de investigación viable
-</dt>
-<dd>
-Universidad Nacional Mayor de San Marcos · Perú · 2026 · <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://github.com/ddelcastillof/seminars_slides/blob/main/seed_lab_2026/slides/Lecture01_Pregunta_Investigable.pdf">Diapositivas</a> <span class="slide-lang">ES</span>
-</dd>
-<dt>
-Introducción a Stata para Investigadores Biomédicos
-</dt>
-<dd>
-Instituto Nacional de Salud · Perú · 2022
-</dd>
-</dl>
-</div>
-</div>
-</section>
-</div>
+  <!-- ── English: Posts, Teaching & Talks ────── -->
+  <div class="lang-block lang-en">
+
+    <section id="posts" class="site-section">
+      <div class="section-label">Posts</div>
+      <ul class="post-list">
+        <li>
+          <a href="#" class="post-title"><span class="post-cat">Methods</span>A definition of effect modification and interaction under the potential outcomes framework</a>
+          <span class="post-date">Apr 2026</span>
+        </li>
+        <li>
+          <a href="#" class="post-title"><span class="post-cat">Methods</span>A short trip through mediation analysis</a>
+          <span class="post-date">Mar 2026</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="teaching" class="site-section">
+      <div class="section-label">Teaching &amp; Talks</div>
+
+      <h3>Courses</h3>
+      <dl class="teaching-list">
+        <dt>Introduction to Epidemiology</dt>
+        <dd>Universidad Científica del Sur &centerdot; Undergraduate &centerdot; Current &centerdot; <strong>Instructor</strong></dd>
+        <dt>Introduction to Biology</dt>
+        <dd>University of Washington &centerdot; Undergraduate &centerdot; 2024 &centerdot; <strong>TA</strong></dd>
+        <dt>Biostatistics and Demography</dt>
+        <dd>Universidad Nacional Mayor de San Marcos &centerdot; Undergraduate &centerdot; 2020 &centerdot; <strong>TA</strong></dd>
+      </dl>
+
+      <h3>Seminars</h3>
+      <dl class="teaching-list">
+        <dt>How to identify a viable research question</dt>
+        <dd>Universidad Nacional Mayor de San Marcos &centerdot; Peru &centerdot; 2026 &centerdot; <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/ddelcastillof/seminars_slides/main/seed_lab_2026/slides/Lecture01_Pregunta_Investigable.pdf" target="_blank" rel="noopener">Slides</a> <span class="slide-lang">ES</span></dd>
+        <dt>Introduction to Stata for Biomedical Researchers</dt>
+        <dd>National Institute of Health &centerdot; Peru &centerdot; 2022</dd>
+      </dl>
+    </section>
+
+  </div><!-- end .lang-block.lang-en -->
+
+  <!-- ── Spanish: Posts, Docencia y Charlas ───── -->
+  <div class="lang-block lang-es" lang="es" hidden>
+
+    <section id="es-posts" class="site-section">
+      <div class="section-label">Posts</div>
+      <ul class="post-list">
+        <li>
+          <a href="#" class="post-title"><span class="post-cat">Métodos</span>Una definición de modificación de efecto e interacción bajo el marco de resultados potenciales</a>
+          <span class="post-date">Abr 2026</span>
+        </li>
+        <li>
+          <a href="#" class="post-title"><span class="post-cat">Métodos</span>Un breve recorrido por el análisis de mediación</a>
+          <span class="post-date">Mar 2026</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="es-teaching" class="site-section">
+      <div class="section-label">Docencia y Charlas</div>
+
+      <h3>Cursos</h3>
+      <dl class="teaching-list">
+        <dt>Introducción a la Epidemiología</dt>
+        <dd>Universidad Científica del Sur &centerdot; Pregrado &centerdot; Actual &centerdot; <strong>Docente</strong></dd>
+        <dt>Introducción a la Biología</dt>
+        <dd>Universidad de Washington &centerdot; Pregrado &centerdot; 2024 &centerdot; <strong>Asistente de Cátedra</strong></dd>
+        <dt>Bioestadística y Demografía</dt>
+        <dd>Universidad Nacional Mayor de San Marcos &centerdot; Pregrado &centerdot; 2020 &centerdot; <strong>Asistente de Cátedra</strong></dd>
+      </dl>
+
+      <h3>Seminarios</h3>
+      <dl class="teaching-list">
+        <dt>Cómo identificar una pregunta de investigación viable</dt>
+        <dd>Universidad Nacional Mayor de San Marcos &centerdot; Perú &centerdot; 2026 &centerdot; <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/ddelcastillof/seminars_slides/main/seed_lab_2026/slides/Lecture01_Pregunta_Investigable.pdf" target="_blank" rel="noopener">Diapositivas</a> <span class="slide-lang">ES</span></dd>
+        <dt>Introducción a Stata para Investigadores Biomédicos</dt>
+        <dd>Instituto Nacional de Salud &centerdot; Perú &centerdot; 2022</dd>
+      </dl>
+    </section>
+
+  </div><!-- end .lang-block.lang-es -->
+
   </main>
   <footer>
     <p>Darwin Del Castillo &middot;
-       <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+       <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>
     </p>
   </footer>
   <script>
   (function () {
-    var saved = localStorage.getItem('lang') || 'en';
-    if (saved === 'es') applyLang('es');
-
+    /* ── Language toggle ── */
     function applyLang(lang) {
       document.querySelectorAll('.lang-en').forEach(function (el) { el.hidden = lang === 'es'; });
       document.querySelectorAll('.lang-es').forEach(function (el) { el.hidden = lang === 'en'; });
-      document.querySelectorAll('[data-en]').forEach(function (el) { el.textContent = el.dataset[lang]; });
+      document.querySelectorAll('[data-en]').forEach(function (el) {
+        var val = el.dataset[lang];
+        if (val !== undefined) el.textContent = val;
+      });
       document.documentElement.lang = lang;
     }
 
@@ -338,22 +248,35 @@ Instituto Nacional de Salud · Perú · 2022
       applyLang(next);
     };
 
-    // In ES mode, nav anchor clicks should scroll to the visible ES sibling
     document.querySelectorAll('.nav-links a[href^="#"]').forEach(function(link) {
       link.addEventListener('click', function(e) {
         if (document.documentElement.lang !== 'es') return;
         var id = link.getAttribute('href').slice(1);
-        var target = document.getElementById(id);
-        if (!target) return;
-        var enBlock = target.closest('.lang-block.lang-en');
-        if (!enBlock) return;
-        var esBlock = enBlock.nextElementSibling;
-        if (esBlock && esBlock.classList.contains('lang-es')) {
-          e.preventDefault();
-          esBlock.scrollIntoView({ behavior: 'smooth' });
-        }
+        var esTarget = document.getElementById('es-' + id);
+        if (!esTarget) return;
+        e.preventDefault();
+        esTarget.scrollIntoView({ behavior: 'smooth' });
       });
     });
+
+    /* ── Dark mode toggle ── */
+    window.toggleTheme = function () {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      if (next === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+    };
+
+    /* ── Restore saved preferences on load ── */
+    var savedLang = localStorage.getItem('lang') || 'en';
+    if (savedLang === 'es') applyLang('es');
+
+    var savedTheme = localStorage.getItem('theme') || 'light';
+    if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
   })();
   </script>
 </body>
