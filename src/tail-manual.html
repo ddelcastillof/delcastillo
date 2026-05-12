@@ -31,7 +31,7 @@
       <h3>Seminars</h3>
       <dl class="teaching-list">
         <dt>How to identify a viable research question</dt>
-        <dd>Universidad Nacional Mayor de San Marcos &centerdot; Peru &centerdot; 2026 &centerdot; <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://github.com/ddelcastillof/seminars_slides/blob/main/seed_lab_2026/slides/Lecture01_Pregunta_Investigable.pdf">Slides</a> <span class="slide-lang">ES</span></dd>
+        <dd>Universidad Nacional Mayor de San Marcos &centerdot; Peru &centerdot; 2026 &centerdot; <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/ddelcastillof/seminars_slides/main/seed_lab_2026/slides/Lecture01_Pregunta_Investigable.pdf" target="_blank" rel="noopener">Slides</a> <span class="slide-lang">ES</span></dd>
         <dt>Introduction to Stata for Biomedical Researchers</dt>
         <dd>National Institute of Health &centerdot; Peru &centerdot; 2022</dd>
       </dl>
@@ -72,7 +72,7 @@
       <h3>Seminarios</h3>
       <dl class="teaching-list">
         <dt>Cómo identificar una pregunta de investigación viable</dt>
-        <dd>Universidad Nacional Mayor de San Marcos &centerdot; Perú &centerdot; 2026 &centerdot; <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://github.com/ddelcastillof/seminars_slides/blob/main/seed_lab_2026/slides/Lecture01_Pregunta_Investigable.pdf">Diapositivas</a> <span class="slide-lang">ES</span></dd>
+        <dd>Universidad Nacional Mayor de San Marcos &centerdot; Perú &centerdot; 2026 &centerdot; <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/ddelcastillof/seminars_slides/main/seed_lab_2026/slides/Lecture01_Pregunta_Investigable.pdf" target="_blank" rel="noopener">Diapositivas</a> <span class="slide-lang">ES</span></dd>
         <dt>Introducción a Stata para Investigadores Biomédicos</dt>
         <dd>Instituto Nacional de Salud &centerdot; Perú &centerdot; 2022</dd>
       </dl>
@@ -89,13 +89,13 @@
   <script>
   (function () {
     /* ── Language toggle ── */
-    var savedLang = localStorage.getItem('lang') || 'en';
-    if (savedLang === 'es') applyLang('es');
-
     function applyLang(lang) {
       document.querySelectorAll('.lang-en').forEach(function (el) { el.hidden = lang === 'es'; });
       document.querySelectorAll('.lang-es').forEach(function (el) { el.hidden = lang === 'en'; });
-      document.querySelectorAll('[data-en]').forEach(function (el) { el.textContent = el.dataset[lang]; });
+      document.querySelectorAll('[data-en]').forEach(function (el) {
+        var val = el.dataset[lang];
+        if (val !== undefined) el.textContent = val;
+      });
       document.documentElement.lang = lang;
     }
 
@@ -109,22 +109,14 @@
       link.addEventListener('click', function(e) {
         if (document.documentElement.lang !== 'es') return;
         var id = link.getAttribute('href').slice(1);
-        var target = document.getElementById(id);
-        if (!target) return;
-        var enBlock = target.closest('.lang-block.lang-en');
-        if (!enBlock) return;
-        var esBlock = enBlock.nextElementSibling;
-        if (esBlock && esBlock.classList.contains('lang-es')) {
-          e.preventDefault();
-          esBlock.scrollIntoView({ behavior: 'smooth' });
-        }
+        var esTarget = document.getElementById('es-' + id);
+        if (!esTarget) return;
+        e.preventDefault();
+        esTarget.scrollIntoView({ behavior: 'smooth' });
       });
     });
 
     /* ── Dark mode toggle ── */
-    var savedTheme = localStorage.getItem('theme') || 'light';
-    if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-
     window.toggleTheme = function () {
       var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
       var next = isDark ? 'light' : 'dark';
@@ -135,6 +127,13 @@
         document.documentElement.removeAttribute('data-theme');
       }
     };
+
+    /* ── Restore saved preferences on load ── */
+    var savedLang = localStorage.getItem('lang') || 'en';
+    if (savedLang === 'es') applyLang('es');
+
+    var savedTheme = localStorage.getItem('theme') || 'light';
+    if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
   })();
   </script>
 </body>
