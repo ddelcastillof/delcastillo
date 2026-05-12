@@ -419,7 +419,7 @@ footer a { color: var(--color-muted); }
 /* ── Hero name & credentials ──────────────────── */
 .about-name {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--color-text);
   line-height: 1.15;
