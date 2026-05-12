@@ -4,10 +4,10 @@
   --color-text:     #1a1a2e;
   --color-bg:       #ffffff;
   --color-muted:    #666666;
-  --color-muted-2:  #888888;
+  --color-muted-2:  #767676;
   --color-border:   #e0e8f4;
   --color-surface:  #f8faff;
-  --color-surface-2:#f0f4f8;
+  --color-surface-2: #f0f4f8;
 }
 
 /* Dark mode placeholder — colors defined in a future phase */
@@ -337,7 +337,7 @@ dl.teaching-list dd {
 
 .csl-entry {
   margin-bottom: 1.25rem;
-  padding-left: 1.25rem;
+  padding-left: 1.5rem;
   text-indent: -1.5rem;
   line-height: 1.6;
   font-size: 0.95rem;
