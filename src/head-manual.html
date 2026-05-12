@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darwin Del Castillo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a class="nav-home" href="#about">Darwin Del Castillo</a>
+    <div class="nav-links">
+      <a href="#research" data-en="Publications" data-es="Publicaciones">Publications</a>
+      <a href="#posts" data-en="Posts" data-es="Posts">Posts</a>
+      <a href="#teaching" data-en="Teaching" data-es="Docencia">Teaching</a>
+      <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/ddelcastillof/cv/main/cv.pdf" target="_blank" rel="noopener" data-en="CV" data-es="CV">CV</a>
+      <button class="lang-globe-btn" id="lang-toggle" onclick="toggleLang()" title="Switch language / Cambiar idioma" aria-label="Switch language"><i class="fa-solid fa-globe"></i></button>
+      <button class="theme-toggle-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+    </div>
+  </nav>
+  <main>
+
+  <!-- ── English: About, Interests, Education ─── -->
+  <div class="lang-block lang-en">
+
+    <section id="about">
+      <div class="about-grid">
+        <div class="about-left">
+          <img src="images/my-picture.jpg" alt="Darwin Del Castillo" class="profile-img">
+          <div class="portrait-title">
+            <div class="about-name">Darwin Del Castillo, <span class="name-credentials">MD, MPH</span></div>
+            <p class="about-tagline">Physician-Scientist · Causal Inference · Epidemiology of NCDs</p>
+            <p class="about-affil">Research Assistant, University of Glasgow<br>Instructor, Universidad Científica del Sur</p>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/ddelcastillof" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://bsky.app/profile/justpvalues.bsky.social" target="_blank" rel="noopener" title="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+            <a href="https://www.linkedin.com/in/ddelcastillof/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?user=iNdNU5QAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+            <a href="mailto:darwin.delcastillofernandez@glasgow.ac.uk" rel="noopener" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/ddelcastillof/cv/main/cv.pdf" target="_blank" rel="noopener" title="My CV"><i class="fa-solid fa-id-card"></i></a>
+          </div>
+          <div class="book-meeting">
+            <a href="https://outlook.office.com/bookwithme/user/0afa5d81a51548549f8b4a1d265159dd@glasgow.ac.uk/meetingtype/iWNid_4rGUu2yaqkD46oNg2?anonymous&ismsaljsauthenabled&ep=mlink" class="book-meeting-btn" target="_blank" rel="noopener">
+              <i class="fa-solid fa-calendar-check"></i> Book a meeting
+            </a>
+          </div>
+        </div>
+        <div class="about-right">
+          <p class="about-bio-lead">Using real-world data and causal inference to understand the burden of non-communicable diseases and inform health policy — with a focus on low- and middle-income countries.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests" class="site-section">
+      <div class="section-label">Interests</div>
+      <ul>
+        <li>Causal inference</li>
+        <li>Epidemiology of NCDs</li>
+        <li>Real-world evidence and disease modelling</li>
+        <li>Global health</li>
+      </ul>
+    </section>
+
+    <section id="education" class="site-section">
+      <div class="section-label">Education</div>
+      <ul class="edu-list">
+        <li><i class="fa-solid fa-graduation-cap"></i><span class="edu-text"><span class="edu-degree">Master of Public Health, 2025</span><span class="edu-inst">University of Washington</span></span></li>
+        <li><i class="fa-solid fa-graduation-cap"></i><span class="edu-text"><span class="edu-degree">Doctor of Medicine, 2021</span><span class="edu-inst">Universidad Nacional Mayor de San Marcos</span></span></li>
+      </ul>
+    </section>
+
+  </div><!-- end .lang-block.lang-en -->
+
+  <!-- ── Spanish: Sobre mí, Intereses, Educación ─ -->
+  <div class="lang-block lang-es" hidden>
+
+    <section id="es-about">
+      <div class="about-grid">
+        <div class="about-left">
+          <img src="images/my-picture.jpg" alt="Darwin Del Castillo" class="profile-img">
+          <div class="portrait-title">
+            <div class="about-name">Darwin Del Castillo, <span class="name-credentials">MD, MPH</span></div>
+            <p class="about-tagline">Médico-Científico · Inferencia Causal · Epidemiología de ENT</p>
+            <p class="about-affil">Asistente de Investigación, Universidad de Glasgow<br>Docente, Universidad Científica del Sur</p>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/ddelcastillof" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://bsky.app/profile/justpvalues.bsky.social" target="_blank" rel="noopener" title="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+            <a href="https://www.linkedin.com/in/ddelcastillof/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?user=iNdNU5QAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+            <a href="mailto:darwin.delcastillofernandez@glasgow.ac.uk" rel="noopener" title="Correo"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/ddelcastillof/cv/main/cv.pdf" target="_blank" rel="noopener" title="Mi CV"><i class="fa-solid fa-id-card"></i></a>
+          </div>
+          <div class="book-meeting">
+            <a href="https://outlook.office.com/bookwithme/user/0afa5d81a51548549f8b4a1d265159dd@glasgow.ac.uk/meetingtype/iWNid_4rGUu2yaqkD46oNg2?anonymous&ismsaljsauthenabled&ep=mlink" class="book-meeting-btn" target="_blank" rel="noopener">
+              <i class="fa-solid fa-calendar-check"></i> Agendar reunión
+            </a>
+          </div>
+        </div>
+        <div class="about-right">
+          <p class="about-bio-lead">Usando datos del mundo real e inferencia causal para comprender la carga de enfermedades no transmisibles e informar políticas de salud — con énfasis en países de ingresos bajos y medios.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="es-interests" class="site-section">
+      <div class="section-label">Intereses</div>
+      <ul>
+        <li>Inferencia causal</li>
+        <li>Epidemiología de enfermedades no transmisibles</li>
+        <li>Evidencia del mundo real y modelado de enfermedades</li>
+        <li>Salud global</li>
+      </ul>
+    </section>
+
+    <section id="es-education" class="site-section">
+      <div class="section-label">Educación</div>
+      <ul class="edu-list">
+        <li><i class="fa-solid fa-graduation-cap"></i><span class="edu-text"><span class="edu-degree">Maestría en Salud Pública, 2025</span><span class="edu-inst">Universidad de Washington</span></span></li>
+        <li><i class="fa-solid fa-graduation-cap"></i><span class="edu-text"><span class="edu-degree">Doctor en Medicina, 2021</span><span class="edu-inst">Universidad Nacional Mayor de San Marcos</span></span></li>
+      </ul>
+    </section>
+
+  </div><!-- end .lang-block.lang-es -->
