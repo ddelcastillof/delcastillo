@@ -1,3 +1,25 @@
+/* ── Design tokens ────────────────────────────── */
+:root {
+  --color-primary:  #1b3a6b;
+  --color-text:     #1a1a2e;
+  --color-bg:       #ffffff;
+  --color-muted:    #666666;
+  --color-muted-2:  #888888;
+  --color-border:   #e0e8f4;
+  --color-surface:  #f8faff;
+  --color-surface-2:#f0f4f8;
+}
+
+/* Dark mode placeholder — colors defined in a future phase */
+[data-theme="dark"] {
+  /* --color-primary: #7aa3e0; */
+  /* --color-text:    #e8eaf0; */
+  /* --color-bg:      #0f1923; */
+  /* --color-muted:   #a0a8b8; */
+  /* --color-border:  #2a3a50; */
+  /* --color-surface: #1a2535; */
+}
+
 /* ── Reset & Base ─────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -7,8 +29,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 1.75;
-  color: #1a1a2e;
-  background: #fff;
+  color: var(--color-text);
+  background: var(--color-bg);
   max-width: clamp(680px, 88vw, 1100px);
   margin: 0 auto;
   padding: 0 1.5rem 4rem;
@@ -18,7 +40,7 @@ body {
 nav {
   position: sticky;
   top: 0;
-  background: #fff;
+  background: var(--color-bg);
   z-index: 100;
   display: flex;
   justify-content: space-between;
@@ -26,20 +48,20 @@ nav {
   padding: 1.25rem 0 0.6rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
-  border-bottom: 3px solid #1b3a6b;
+  border-bottom: 3px solid var(--color-primary);
 }
 
 .nav-home {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1b3a6b;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
 .nav-links a {
   margin-left: 1.5rem;
-  color: #1b3a6b;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -60,7 +82,7 @@ main > .lang-block {
 main > .lang-block.lang-en ~ section,
 main > section ~ .lang-block.lang-en,
 main > section ~ .lang-block.lang-es {
-  border-top: 1px solid #e0e8f4;
+  border-top: 1px solid var(--color-border);
 }
 
 /* ── Section two-column layout ────────────────── */
@@ -80,7 +102,7 @@ main > section ~ .lang-block.lang-es {
   padding-left: 0;
   margin: 0;
   font-size: 1.1rem;
-  color: #1b3a6b;
+  color: var(--color-primary);
 }
 
 .section-body {
@@ -89,7 +111,7 @@ main > section ~ .lang-block.lang-es {
 }
 
 /* ── Links ────────────────────────────────────── */
-a { color: #1b3a6b; }
+a { color: var(--color-primary); }
 a:hover { text-decoration: underline; }
 
 /* ── Headings ─────────────────────────────────── */
@@ -99,7 +121,7 @@ h2 {
   font-size: 1.25rem;
   font-weight: 700;
   margin: 2.5rem 0 0.75rem;
-  border-left: 3px solid #1b3a6b;
+  border-left: 3px solid var(--color-primary);
   padding-left: 0.65rem;
 }
 h3 { font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 600; margin: 1.75rem 0 0.5rem; }
@@ -137,7 +159,7 @@ li { margin-bottom: 0.35rem; }
   width: 150px;
   margin: 0 auto 1rem;
   border-radius: 50%;
-  border: 3px solid #1b3a6b;
+  border: 3px solid var(--color-primary);
   padding: 3px;
 }
 
@@ -146,7 +168,7 @@ li { margin-bottom: 0.35rem; }
   font-family: 'Montserrat', sans-serif;
   font-size: 1.15rem;
   font-weight: 700;
-  color: #1a1a2e;
+  color: var(--color-text);
   margin: 0 0 0.25rem;
   border-left: none;
   padding-left: 0;
@@ -154,13 +176,13 @@ li { margin-bottom: 0.35rem; }
 
 .about-role {
   font-size: 0.88rem;
-  color: #555;
+  color: var(--color-muted);
   margin: 0 0 0.2rem;
 }
 
 .about-inst {
   font-size: 0.85rem;
-  color: #1b3a6b;
+  color: var(--color-primary);
   line-height: 1.45;
   margin: 0 0 1rem;
 }
@@ -176,7 +198,7 @@ li { margin-bottom: 0.35rem; }
 }
 
 .social-links a {
-  color: #1b3a6b;
+  color: var(--color-primary);
   text-decoration: none;
   transition: opacity 0.15s;
 }
@@ -197,17 +219,17 @@ li { margin-bottom: 0.35rem; }
   align-items: center;
   gap: 0.4rem;
   padding: 0.3rem 0.9rem;
-  border: 1.5px solid #1b3a6b;
+  border: 1.5px solid var(--color-primary);
   border-radius: 20px;
   font-size: 0.8rem;
-  color: #1b3a6b;
+  color: var(--color-primary);
   text-decoration: none;
   transition: background 0.18s, color 0.18s;
 }
 
 .book-meeting-btn:hover {
-  background: #1b3a6b;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-bg);
   text-decoration: none;
 }
 
@@ -228,7 +250,7 @@ li { margin-bottom: 0.35rem; }
 .edu-list .fa-graduation-cap {
   flex-shrink: 0;
   margin-top: 0.2rem;
-  color: #1b3a6b;
+  color: var(--color-primary);
   font-size: 1.05rem;
 }
 
@@ -240,13 +262,13 @@ li { margin-bottom: 0.35rem; }
 .edu-degree {
   font-weight: 600;
   font-size: 0.95rem;
-  color: #1a1a2e;
+  color: var(--color-text);
   line-height: 1.4;
 }
 
 .edu-inst {
   font-size: 0.85rem;
-  color: #888;
+  color: var(--color-muted-2);
   margin-top: 0.1rem;
 }
 
@@ -274,13 +296,13 @@ dl.teaching-list {
 dl.teaching-list dt {
   font-weight: 600;
   font-size: 0.95rem;
-  color: #1a1a2e;
+  color: var(--color-text);
 }
 
 dl.teaching-list dd {
   margin: 0;
   font-size: 0.9rem;
-  color: #555;
+  color: var(--color-muted);
 }
 
 /* ── Slide language badge ─────────────────────── */
@@ -294,8 +316,8 @@ dl.teaching-list dd {
   vertical-align: middle;
   line-height: 1.7;
   margin-left: 0.3rem;
-  background: #e8eef7;
-  color: #1b3a6b;
+  background: var(--color-border);
+  color: var(--color-primary);
 }
 
 .section-body ol li,
@@ -315,10 +337,15 @@ dl.teaching-list dd {
 
 .csl-entry {
   margin-bottom: 1.25rem;
-  padding-left: 1.5rem;
+  padding-left: 1.25rem;
   text-indent: -1.5rem;
   line-height: 1.6;
   font-size: 0.95rem;
+  border-left: 3px solid transparent;
+  transition: border-color 0.15s;
+}
+.csl-entry:hover {
+  border-left-color: var(--color-primary);
 }
 
 /* ── Tables (teaching page) ──────────────────── */
@@ -333,7 +360,7 @@ table {
 th {
   text-align: left;
   padding: 0.4rem 0.75rem;
-  border-bottom: 2px solid #1b3a6b;
+  border-bottom: 2px solid var(--color-primary);
   font-weight: 600;
 }
 
@@ -354,14 +381,138 @@ td {
 footer {
   margin: 4rem -1.5rem 0;
   padding: 1rem 1.5rem;
-  border-top: 3px solid #1b3a6b;
-  background: #f0f4f8;
+  border-top: 3px solid var(--color-primary);
+  background: var(--color-surface-2);
   font-size: 0.85rem;
-  color: #666;
+  color: var(--color-muted);
   font-family: 'Montserrat', sans-serif;
 }
 
-footer a { color: #666; }
+footer a { color: var(--color-muted); }
+
+/* ── Dark mode toggle button ──────────────────── */
+.theme-toggle-btn {
+  margin-left: 0.75rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: opacity 0.18s;
+  vertical-align: middle;
+}
+.theme-toggle-btn:hover { opacity: 0.6; }
+.theme-toggle-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ── Hero name & credentials ──────────────────── */
+.about-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.15;
+  margin: 0 0 0.3rem;
+}
+.about-name .name-credentials {
+  color: var(--color-primary);
+}
+
+/* ── Hero tagline ─────────────────────────────── */
+.about-tagline {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 0.15rem;
+  line-height: 1.4;
+}
+
+/* ── Hero affiliation ─────────────────────────── */
+.about-affil {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  margin: 0 0 0.75rem;
+  line-height: 1.45;
+}
+
+/* ── Research identity sentence ───────────────── */
+.about-bio-lead {
+  font-size: 0.92rem;
+  color: var(--color-text);
+  line-height: 1.65;
+  border-left: 3px solid var(--color-primary);
+  padding: 0.45rem 0.6rem 0.45rem 0.75rem;
+  background: var(--color-surface);
+  border-radius: 0 4px 4px 0;
+  margin: 0;
+}
+
+/* ── Section label (small-caps uppercase) ─────── */
+.section-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+/* ── Generic site section spacing ────────────── */
+.site-section {
+  padding-top: 2.25rem;
+  padding-bottom: 1.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+/* ── Post list (title + date rows) ───────────── */
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.post-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--color-surface-2);
+  margin-bottom: 0;
+}
+.post-list li:last-child { border-bottom: none; }
+.post-list .post-title {
+  font-size: 0.92rem;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.post-list .post-title:hover { text-decoration: underline; }
+.post-list .post-date {
+  font-size: 0.8rem;
+  color: var(--color-muted-2);
+  white-space: nowrap;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
+/* ── Post category badge ──────────────────────── */
+.post-cat {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.05rem 0.4rem;
+  border-radius: 3px;
+  vertical-align: middle;
+  line-height: 1.7;
+  margin-right: 0.4rem;
+  background: var(--color-border);
+  color: var(--color-primary);
+}
 
 /* ── Mobile ───────────────────────────────────── */
 @media (max-width: 600px) {
@@ -392,7 +543,7 @@ footer a { color: #666; }
   padding: 0;
   border: none;
   background: transparent;
-  color: #1b3a6b;
+  color: var(--color-primary);
   font-size: 1.15rem;
   line-height: 1;
   cursor: pointer;
@@ -403,7 +554,7 @@ footer a { color: #666; }
   opacity: 0.6;
 }
 .lang-globe-btn:focus-visible {
-  outline: 2px solid #1b3a6b;
+  outline: 2px solid var(--color-primary);
   outline-offset: 3px;
   border-radius: 3px;
 }
