@@ -6,7 +6,7 @@ nocite: '@*'
 
 <section id="research" class="site-section">
 
-<div class="section-label">Publications</div>
+<div class="section-label">Featured Publications</div>
 
 ::: {#refs}
 :::
