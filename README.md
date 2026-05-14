@@ -1,21 +1,31 @@
 # Academic Website
 
-This is my personal academic website built with Pandoc and HTML code. My references are pulled directly from a Paperpile workflow. The site is rendered with a makefile shell file.
+Personal academic website for Darwin Del Castillo. Bilingual static site (English at `/`, Spanish at `/es/`) built from per-language HTML fragments with Pandoc + GNU Make. Citations are sourced from a Paperpile `.bib` export.
 
 ## Tech Stack
 
-- **Framework**: Pandoc + HTML output
-- **Data Source**: Paperpile bib files
-- **Styling**: Custom CSS
-- **Deployment**: GitHub Pages
+- **Build**: Pandoc + citeproc, assembled with a `Makefile`
+- **Bibliography**: BibTeX (`src/references.bib`) + CSL (`csl/harvard-cite-them-right-no-et-al.csl`)
+- **i18n**: URL-based (`/` for EN, `/es/` for ES) with `hreflang` alternates
+- **Styling**: Custom CSS, dark-mode toggle
+- **Deployment**: GitHub Pages, serving from `/docs`
 
 ## Development
 
 ```bash
-# Render the site
-make build
+# Full build (EN + ES landing + standalone publications + styles + images)
+make
+
+# Clean and rebuild
+make clean && make
+
+# Preview locally
+cd docs && python3 -m http.server 8765
+# Open http://localhost:8765/ (EN) or http://localhost:8765/es/ (ES)
 ```
+
 ## License
+
 [![CC BY-NC 4.0][cc-by-nc-shield]][cc-by-nc]
 
 This work is licensed under a
