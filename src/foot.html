@@ -5,23 +5,23 @@
     </p>
   </footer>
   <script>
-(function () {
-  /* ── Dark mode toggle ── */
-  window.toggleTheme = function () {
-    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    var next = isDark ? 'light' : 'dark';
-    localStorage.setItem('theme', next);
-    if (next === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-    }
-  };
+  (function () {
+    /* ── Dark mode toggle ── */
+    window.toggleTheme = function () {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      if (next === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+    };
 
-  /* ── Restore saved theme on load ── */
-  var savedTheme = localStorage.getItem('theme') || 'light';
-  if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-})();
-</script>
+    /* ── Restore saved preferences on load ── */
+    var savedTheme = localStorage.getItem('theme') || 'light';
+    if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  })();
+  </script>
 </body>
 </html>

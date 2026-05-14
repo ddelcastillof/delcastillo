@@ -2,46 +2,68 @@ BIB       := src/references.bib
 CSL       := csl/harvard-cite-them-right-no-et-al.csl
 FILTER    := src/bold-author.lua
 BOLD_ONLY := src/bold-only.lua
-PUBS_HEAD := src/head-pubs.html
 FOOT      := src/foot.html
 
 .PHONY: all publications styles clean
 
-all: docs/index.html docs/publications.html docs/styles.css docs/images
+all: docs/index.html docs/es/index.html \
+     docs/publications.html docs/es/publications.html \
+     docs/styles.css docs/images
 
-# Assemble main page from 3 parts
-docs/index.html: src/head-manual.html docs/fragments/research.html src/tail-manual.html
-	cat src/head-manual.html docs/fragments/research.html src/tail-manual.html > $@
+# ── English landing ──
+docs/index.html: src/head-en.html docs/fragments/research-en.html src/tail-en.html
+	cat src/head-en.html docs/fragments/research-en.html src/tail-en.html > $@
 
-# Research fragment — featured (1st/2nd author) entries from references.bib
-docs/fragments/research.html: src/research.md $(BIB) $(CSL) $(FILTER)
+docs/fragments/research-en.html: src/research-en.md $(BIB) $(CSL) $(FILTER)
 	@mkdir -p docs/fragments
 	pandoc $< -o $@ --wrap=none \
 	  --citeproc --bibliography=$(BIB) --csl=$(CSL) \
 	  --lua-filter=$(FILTER)
 
-# Standalone publications page
-docs/publications.html: $(PUBS_HEAD) $(FOOT) docs/fragments/publications.html
-	cat $(PUBS_HEAD) docs/fragments/publications.html $(FOOT) > $@
+# ── Spanish landing ──
+docs/es/index.html: src/head-es.html docs/fragments/research-es.html src/tail-es.html
+	@mkdir -p docs/es
+	cat src/head-es.html docs/fragments/research-es.html src/tail-es.html > $@
 
-docs/fragments/publications.html: src/publications.md $(BIB) $(CSL) $(BOLD_ONLY)
+docs/fragments/research-es.html: src/research-es.md $(BIB) $(CSL) $(FILTER)
+	@mkdir -p docs/fragments
+	pandoc $< -o $@ --wrap=none \
+	  --citeproc --bibliography=$(BIB) --csl=$(CSL) \
+	  --lua-filter=$(FILTER)
+
+# ── English publications ──
+docs/publications.html: src/head-pubs-en.html docs/fragments/publications-en.html $(FOOT)
+	cat src/head-pubs-en.html docs/fragments/publications-en.html $(FOOT) > $@
+
+docs/fragments/publications-en.html: src/publications-en.md $(BIB) $(CSL) $(BOLD_ONLY)
 	@mkdir -p docs/fragments
 	pandoc $< -o $@ --wrap=none \
 	  --citeproc --bibliography=$(BIB) --csl=$(CSL) \
 	  --lua-filter=$(BOLD_ONLY)
 
+# ── Spanish publications ──
+docs/es/publications.html: src/head-pubs-es.html docs/fragments/publications-es.html $(FOOT)
+	@mkdir -p docs/es
+	cat src/head-pubs-es.html docs/fragments/publications-es.html $(FOOT) > $@
+
+docs/fragments/publications-es.html: src/publications-es.md $(BIB) $(CSL) $(BOLD_ONLY)
+	@mkdir -p docs/fragments
+	pandoc $< -o $@ --wrap=none \
+	  --citeproc --bibliography=$(BIB) --csl=$(CSL) \
+	  --lua-filter=$(BOLD_ONLY)
+
+# ── Shared assets ──
 docs/styles.css: src/styles.css
 	cp $< $@
 
-# Convenience alias: rebuild stylesheet only
 styles: docs/styles.css
 
 docs/images: images
 	rm -rf $@ && cp -r $< $@
 
-# Convenience alias: rebuild publications page only (e.g. after updating references.bib)
-publications: docs/publications.html
+publications: docs/publications.html docs/es/publications.html
 
 clean:
 	rm -f docs/index.html docs/publications.html docs/styles.css
-	rm -rf docs/images docs/fragments
+	rm -f docs/es/index.html docs/es/publications.html
+	rm -rf docs/images docs/fragments docs/es
