@@ -73,24 +73,15 @@ nav {
 }
 
 /* ── Sections (single-page layout) ───────────── */
-main > section,
-main > .lang-block {
+main > section {
   padding-top: 3rem;
   padding-bottom: 2rem;
   scroll-margin-top: 4rem;
 }
 
-/* Separators between visible sections */
-main > .lang-block.lang-en ~ section,
-main > section ~ .lang-block.lang-en,
-main > section ~ .lang-block.lang-es {
+/* Separators between sections */
+main > section ~ section {
   border-top: 1px solid var(--color-border);
-}
-
-/* First site-section inside a lang-block inherits the block's border — no double line */
-main > .lang-block > .site-section:first-child {
-  border-top: none;
-  padding-top: 0;
 }
 
 /* ── Section two-column layout ────────────────── */
