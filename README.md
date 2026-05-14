@@ -6,7 +6,7 @@ Personal academic website for Darwin Del Castillo. Bilingual static site (Englis
 
 - **Build**: Pandoc + citeproc, assembled with a `Makefile`
 - **Bibliography**: BibTeX (`src/references.bib`) + CSL (`csl/harvard-cite-them-right-no-et-al.csl`)
-- **i18n**: URL-based (`/` for EN, `/es/` for ES) with `hreflang` alternates
+- **Bilingual routing**: URL-based (`/` for EN, `/es/` for ES) with `hreflang` alternates
 - **Styling**: Custom CSS, dark-mode toggle
 - **Deployment**: GitHub Pages, serving from `/docs`
 
