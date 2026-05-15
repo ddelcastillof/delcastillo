@@ -25,15 +25,17 @@
 /* ── Reset & Base ─────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
   line-height: 1.75;
   color: var(--color-text);
   background: var(--color-bg);
-  max-width: clamp(680px, 88vw, 1100px);
+  max-width: clamp(700px, 100vw, 1340px);
   margin: 0 auto;
   padding: 0 1.5rem 4rem;
 }
